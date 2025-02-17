@@ -1,0 +1,10 @@
+.hero-container {
+    background-image: url('https://www.hse.ru/mirror/pubs/share/direct/463746598.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.breadcrumb-item::before {
+    color: white !important; /* Делаем белым */
+}
