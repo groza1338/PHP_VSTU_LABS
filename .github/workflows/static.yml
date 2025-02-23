@@ -3,8 +3,8 @@ name: Deploy GitHub Pages from LR1
 on:
   push:
     branches:
-      - main  # Запускаем деплой при каждом пуше в main
-  workflow_dispatch:  # Позволяет вручную запускать Action
+      - main
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -22,12 +22,12 @@ jobs:
         run: |
           mkdir public
           cp -r LR1/* public/
-          touch public/.nojekyll  # Отключаем Jekyll, если есть файлы с _
+          touch public/.nojekyll
 
       - name: Развернуть в GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Ветка для GitHub Pages
-          folder: public    # Папка, которую деплоим
-          clean: true       # Удаляет старые файлы перед загрузкой
-
+          branch: gh-pages
+          folder: public
+          clean: true
+          token: ${{ secrets.GH_TOKEN }}  # Используем PAT вместо GITHUB_TOKEN
