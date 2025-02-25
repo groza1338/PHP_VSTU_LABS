@@ -25,3 +25,8 @@
 .breadcrumb-item::before {
     color: white !important; /* Делаем белым */
 }
+
+.dropdown {
+    display: flex;
+    align-items: stretch;
+}
