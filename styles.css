@@ -30,3 +30,7 @@
     display: flex;
     align-items: stretch;
 }
+
+.red-link:hover {
+    color: red !important;
+}
