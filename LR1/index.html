@@ -109,238 +109,299 @@
         </div>
     </header>
     <section class="container-fluid text-light">
-        <div class="row mt-5">
+        <div class="row mt-5 offset-2">
             <div class="col-md-10 col-lg-8">
-                <div class="ps-md-5">
-                    <article>
-                        <p>Бакалаврская программа</p>
-                        <h1>Прикладная математика и информатика</h1>
-                        <p>Целью программы является подготовка специалистов по работе с данными (data scientist),
-                            аналитиков
-                            (analyst),
-                            исследователей в области компьютерных наук (researcher and computer scientist),
-                            инженеров-разработчиков
-                            и
-                            инженеров-исследователей по программному обеспечению (software engineer and research
-                            software
-                            engineer).
-                        </p>
-                        <p>Программа рассчитана на молодых людей, готовящихся к развитию существующих и созданию новых
-                            компьютерных
-                            технологий, работая в ведущих ИТ-компаниях и исследовательских центрах. Учебный план
-                            программы
-                            разработан с
-                            учетом опыта ведущих университетов, таких как Stanford University (США), EPFL (Швейцария),
-                            МГУ и
-                            МФТИ
-                            (Россия), а также Школы анализа данных Яндекса, разработавшей одну из самых сильных
-                            образовательных
-                            программ
-                            в области компьютерных наук в России.
-                        </p>
-                    </article>
+                <article>
+                    <p>Бакалаврская программа</p>
+                    <h1>Прикладная математика и информатика</h1>
+                    <p>Целью программы является подготовка специалистов по работе с данными (data scientist),
+                        аналитиков
+                        (analyst),
+                        исследователей в области компьютерных наук (researcher and computer scientist),
+                        инженеров-разработчиков
+                        и
+                        инженеров-исследователей по программному обеспечению (software engineer and research
+                        software
+                        engineer).
+                    </p>
+                    <p>Программа рассчитана на молодых людей, готовящихся к развитию существующих и созданию новых
+                        компьютерных
+                        технологий, работая в ведущих ИТ-компаниях и исследовательских центрах. Учебный план
+                        программы
+                        разработан с
+                        учетом опыта ведущих университетов, таких как Stanford University (США), EPFL (Швейцария),
+                        МГУ и
+                        МФТИ
+                        (Россия), а также Школы анализа данных Яндекса, разработавшей одну из самых сильных
+                        образовательных
+                        программ
+                        в области компьютерных наук в России.
+                    </p>
+                </article>
 
-                    <!-- Кнопки -->
-                    <div class="d-flex gap-3 mt-5">
-                        <button class="btn btn-outline-light btn-lg rounded-1">Задать вопрос о программе</button>
-                        <button class="btn btn-outline-light btn-lg rounded-1">Телеграм-канал для абитуриентов</button>
+                <!-- Кнопки -->
+                <div class="d-flex gap-3 mt-5">
+                    <button class="btn btn-outline-light btn-lg rounded-1">Задать вопрос о программе</button>
+                    <button class="btn btn-outline-light btn-lg rounded-1">Телеграм-канал для абитуриентов</button>
+                </div>
+
+                <!-- Выпадающие меню -->
+                <div class="mt-4 btn-group">
+
+                    <!-- Домик -->
+                    <a class="btn text-dark bg-light rounded-2 rounded-bottom-0" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                             fill="none">
+                            <path d="M12 3L3 12V21H11V16H13V21H21V12L12 3ZM19 19H15V14H9V19H5V13L12 6L19 13V19Z"
+                                  fill="currentColor"></path>
+                        </svg>
+                    </a>
+
+                    <!-- О программе -->
+                    <div class="dropdown me-2 dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle rounded-bottom-0  border-0"
+                                type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" data-bs-auto-close="outside">
+                            О программе
+                        </button>
+                        <ul class="dropdown-menu shadow-lg">
+                            <li><a class="dropdown-item" href="#">О программе</a></li>
+                            <li><a class="dropdown-item" href="#">Пилотный поток</a></li>
+                            <li><a class="dropdown-item" href="#">Особенности программы</a></li>
+                            <li><a class="dropdown-item" href="#">Лекторы 1-2 курсов</a></li>
+                            <li>
+                                <button class="dropdown-item text-decoration-underline" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample" aria-expanded="false"
+                                        aria-controls="collapseExample">
+                                    О специализациях
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="op-nav-menu__arr" width="18"
+                                         height="18" viewBox="0 0 18 18" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M3.75 6.75L9 12L14.25 6.75H3.75Z" fill="currentColor"></path>
+                                    </svg>
+                                </button>
+                                <div class="collapse" id="collapseExample">
+                                    <div class="card card-body">
+                                        <ul class="list-unstyled ps-3">
+                                            <li><a class="dropdown-item" href="#">Общая информация</a></li>
+                                            <li><a class="dropdown-item" href="#">«Распределённые системы»</a></li>
+                                            <li><a class="dropdown-item" href="#">«Промышленная разработка»</a></li>
+                                            <li><a class="dropdown-item" href="#">«Теоретическая информатика»</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">«Машинное обучение и
+                                                приложения»</a></li>
+                                            <li><a class="dropdown-item" href="#">«Математическая инженерия в науке
+                                                и бизнесе»</a></li>
+                                            <li><a class="dropdown-item" href="#">«Анализ и принятие решений»</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">«Анализ данных и интеллектуальные
+                                                системы»</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Факультативы ФКН</a></li>
+                            <li><a class="dropdown-item" href="#">Партнеры</a></li>
+                            <li><a class="dropdown-item" href="#">Достижения студентов</a></li>
+                            <li><a class="dropdown-item" href="#">Выпускники</a></li>
+                            <li><a class="dropdown-item" href="#">Трек по Искусственному интеллекту</a></li>
+                        </ul>
                     </div>
 
-                    <!-- Выпадающие меню -->
-                    <div class="mt-4 btn-group">
+                    <!-- Абитуриентам -->
+                    <div class="dropdown me-2 dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle border-0 rounded-bottom-0"
+                                type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Абитуриентам
+                        </button>
+                        <ul class="dropdown-menu shadow-lg">
+                            <li><a class="dropdown-item" href="#">Паспорт программы</a></li>
+                            <li><a class="dropdown-item" href="#">Траектории поступления</a></li>
+                            <li><a class="dropdown-item" href="#">Отдел по работе с абитуриентами, студентами и
+                                выпускниками</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Подготовка к поступлению</a></li>
+                            <li><a class="dropdown-item" href="#">Стипендии для поступивших</a></li>
+                            <li><a class="dropdown-item" href="#">Будущая профессия</a></li>
+                        </ul>
+                    </div>
 
-                        <!-- Домик -->
-                        <a class="btn text-dark bg-light rounded-2 rounded-bottom-0" href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                 fill="none">
-                                <path d="M12 3L3 12V21H11V16H13V21H21V12L12 3ZM19 19H15V14H9V19H5V13L12 6L19 13V19Z"
-                                      fill="currentColor"></path>
-                            </svg>
-                        </a>
-
-                        <!-- О программе -->
-                        <div class="dropdown me-2 dropdown">
-                            <button class="btn btn-outline-light dropdown-toggle rounded-bottom-0  border-0"
-                                    type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false" data-bs-auto-close="outside">
-                                О программе
-                            </button>
-                            <ul class="dropdown-menu shadow-lg">
-                                <li><a class="dropdown-item" href="#">О программе</a></li>
-                                <li><a class="dropdown-item" href="#">Пилотный поток</a></li>
-                                <li><a class="dropdown-item" href="#">Особенности программы</a></li>
-                                <li><a class="dropdown-item" href="#">Лекторы 1-2 курсов</a></li>
-                                <li>
-                                    <button class="dropdown-item text-decoration-underline" type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#collapseExample" aria-expanded="false"
-                                            aria-controls="collapseExample">
-                                        О специализациях
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="op-nav-menu__arr" width="18"
-                                             height="18" viewBox="0 0 18 18" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.75 6.75L9 12L14.25 6.75H3.75Z" fill="currentColor"></path>
-                                        </svg>
-                                    </button>
-                                    <div class="collapse" id="collapseExample">
-                                        <div class="card card-body">
-                                            <ul class="list-unstyled ps-3">
-                                                <li><a class="dropdown-item" href="#">Общая информация</a></li>
-                                                <li><a class="dropdown-item" href="#">«Распределённые системы»</a></li>
-                                                <li><a class="dropdown-item" href="#">«Промышленная разработка»</a></li>
-                                                <li><a class="dropdown-item" href="#">«Теоретическая информатика»</a>
-                                                </li>
-                                                <li><a class="dropdown-item" href="#">«Машинное обучение и
-                                                    приложения»</a></li>
-                                                <li><a class="dropdown-item" href="#">«Математическая инженерия в науке
-                                                    и бизнесе»</a></li>
-                                                <li><a class="dropdown-item" href="#">«Анализ и принятие решений»</a>
-                                                </li>
-                                                <li><a class="dropdown-item" href="#">«Анализ данных и интеллектуальные
-                                                    системы»</a></li>
-                                            </ul>
-                                        </div>
+                    <!-- Студентам -->
+                    <div class="dropdown me-2">
+                        <button class="btn btn-outline-light dropdown-toggle border-0 rounded-bottom-0"
+                                type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" data-bs-auto-close="outside">
+                            Студентам
+                        </button>
+                        <ul class="dropdown-menu shadow-lg">
+                            <li><a class="dropdown-item" href="#">Доска объявлений</a></li>
+                            <li><a class="dropdown-item" href="#">Онлайн-сервисы для студентов</a></li>
+                            <li>
+                                <button class="dropdown-item text-decoration-underline" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample1" aria-expanded="false"
+                                        aria-controls="collapseExample1">
+                                    Выбор траектории обучения
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="op-nav-menu__arr" width="18"
+                                         height="18" viewBox="0 0 18 18" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M3.75 6.75L9 12L14.25 6.75H3.75Z" fill="currentColor"></path>
+                                    </svg>
+                                </button>
+                                <div class="collapse" id="collapseExample1">
+                                    <div class="card card-body">
+                                        <ul class="list-unstyled ps-3">
+                                            <li><a class="dropdown-item" href="#">Общеуниверситетские курсы</a></li>
+                                            <li><a class="dropdown-item" href="#">Майноры</a></li>
+                                        </ul>
                                     </div>
-                                </li>
-                                <li><a class="dropdown-item" href="#">Факультативы ФКН</a></li>
-                                <li><a class="dropdown-item" href="#">Партнеры</a></li>
-                                <li><a class="dropdown-item" href="#">Достижения студентов</a></li>
-                                <li><a class="dropdown-item" href="#">Выпускники</a></li>
-                                <li><a class="dropdown-item" href="#">Трек по Искусственному интеллекту</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Абитуриентам -->
-                        <div class="dropdown me-2 dropdown">
-                            <button class="btn btn-outline-light dropdown-toggle border-0 rounded-bottom-0"
-                                    type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                Абитуриентам
-                            </button>
-                            <ul class="dropdown-menu shadow-lg">
-                                <li><a class="dropdown-item" href="#">Паспорт программы</a></li>
-                                <li><a class="dropdown-item" href="#">Траектории поступления</a></li>
-                                <li><a class="dropdown-item" href="#">Отдел по работе с абитуриентами, студентами и
-                                    выпускниками</a>
-                                </li>
-                                <li><a class="dropdown-item" href="#">Подготовка к поступлению</a></li>
-                                <li><a class="dropdown-item" href="#">Стипендии для поступивших</a></li>
-                                <li><a class="dropdown-item" href="#">Будущая профессия</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Студентам -->
-                        <div class="dropdown me-2">
-                            <button class="btn btn-outline-light dropdown-toggle border-0 rounded-bottom-0"
-                                    type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false" data-bs-auto-close="outside">
-                                Студентам
-                            </button>
-                            <ul class="dropdown-menu shadow-lg">
-                                <li><a class="dropdown-item" href="#">Доска объявлений</a></li>
-                                <li><a class="dropdown-item" href="#">Онлайн-сервисы для студентов</a></li>
-                                <li>
-                                    <button class="dropdown-item text-decoration-underline" type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#collapseExample1" aria-expanded="false"
-                                            aria-controls="collapseExample1">
-                                        Выбор траектории обучения
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="op-nav-menu__arr" width="18"
-                                             height="18" viewBox="0 0 18 18" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.75 6.75L9 12L14.25 6.75H3.75Z" fill="currentColor"></path>
-                                        </svg>
-                                    </button>
-                                    <div class="collapse" id="collapseExample1">
-                                        <div class="card card-body">
-                                            <ul class="list-unstyled ps-3">
-                                                <li><a class="dropdown-item" href="#">Общеуниверситетские курсы</a></li>
-                                                <li><a class="dropdown-item" href="#">Майноры</a></li>
-                                            </ul>
-                                        </div>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="dropdown-item text-decoration-underline" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample2" aria-expanded="false"
+                                        aria-controls="collapseExample2">
+                                    Практическая подготовка
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="op-nav-menu__arr" width="18"
+                                         height="18" viewBox="0 0 18 18" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M3.75 6.75L9 12L14.25 6.75H3.75Z" fill="currentColor"></path>
+                                    </svg>
+                                </button>
+                                <div class="collapse" id="collapseExample2">
+                                    <div class="card card-body">
+                                        <ul class="list-unstyled ps-3">
+                                            <li><a class="dropdown-item" href="#">Общая информация</a></li>
+                                            <li><a class="dropdown-item" href="#">Проекты студентов</a></li>
+                                            <li><a class="dropdown-item" href="#">Практики студентов</a></li>
+                                            <li><a class="dropdown-item" href="#">Преддипломная практика 4 курса</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">ВКР 4 курса</a></li>
+                                        </ul>
                                     </div>
-                                </li>
-                                <li>
-                                    <button class="dropdown-item text-decoration-underline" type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#collapseExample2" aria-expanded="false"
-                                            aria-controls="collapseExample2">
-                                        Практическая подготовка
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="op-nav-menu__arr" width="18"
-                                             height="18" viewBox="0 0 18 18" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.75 6.75L9 12L14.25 6.75H3.75Z" fill="currentColor"></path>
-                                        </svg>
-                                    </button>
-                                    <div class="collapse" id="collapseExample2">
-                                        <div class="card card-body">
-                                            <ul class="list-unstyled ps-3">
-                                                <li><a class="dropdown-item" href="#">Общая информация</a></li>
-                                                <li><a class="dropdown-item" href="#">Проекты студентов</a></li>
-                                                <li><a class="dropdown-item" href="#">Практики студентов</a></li>
-                                                <li><a class="dropdown-item" href="#">Преддипломная практика 4 курса</a>
-                                                </li>
-                                                <li><a class="dropdown-item" href="#">ВКР 4 курса</a></li>
-                                            </ul>
-                                        </div>
+                                </div>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Project Proposal</a></li>
+                            <li><a class="dropdown-item" href="#">Итоговая аттестация</a></li>
+                            <li><a class="dropdown-item" href="#">Каталог ВКР</a></li>
+                            <li><a class="dropdown-item" href="#">Факультативы ФКН</a></li>
+                            <li>
+                                <button class="dropdown-item text-decoration-underline" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseExample3" aria-expanded="false"
+                                        aria-controls="collapseExample3">
+                                    Первокурсникам
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="op-nav-menu__arr" width="18"
+                                         height="18" viewBox="0 0 18 18" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M3.75 6.75L9 12L14.25 6.75H3.75Z" fill="currentColor"></path>
+                                    </svg>
+                                </button>
+                                <div class="collapse" id="collapseExample3">
+                                    <div class="card card-body">
+                                        <ul class="list-unstyled ps-3">
+                                            <li><a class="dropdown-item" href="#">To Do List первокурсника ПМИ</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">БЖД</a></li>
+                                        </ul>
                                     </div>
-                                </li>
-                                <li><a class="dropdown-item" href="#">Project Proposal</a></li>
-                                <li><a class="dropdown-item" href="#">Итоговая аттестация</a></li>
-                                <li><a class="dropdown-item" href="#">Каталог ВКР</a></li>
-                                <li><a class="dropdown-item" href="#">Факультативы ФКН</a></li>
-                                <li>
-                                    <button class="dropdown-item text-decoration-underline" type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#collapseExample3" aria-expanded="false"
-                                            aria-controls="collapseExample3">
-                                        Первокурсникам
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="op-nav-menu__arr" width="18"
-                                             height="18" viewBox="0 0 18 18" fill="none">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M3.75 6.75L9 12L14.25 6.75H3.75Z" fill="currentColor"></path>
-                                        </svg>
-                                    </button>
-                                    <div class="collapse" id="collapseExample3">
-                                        <div class="card card-body">
-                                            <ul class="list-unstyled ps-3">
-                                                <li><a class="dropdown-item" href="#">To Do List первокурсника ПМИ</a>
-                                                </li>
-                                                <li><a class="dropdown-item" href="#">БЖД</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a class="dropdown-item" href="#">Перевод и восстановление на программу</a></li>
-                                <li><a class="dropdown-item" href="#">Студенческая мобильность</a></li>
-                                <li><a class="dropdown-item" href="#">Рейтинги</a></li>
-                                <li><a class="dropdown-item" href="#">Дополнительные иностранные языки</a></li>
-                                <li><a class="dropdown-item" href="#">Как поменять учебный курс</a></li>
-                            </ul>
-                        </div>
+                                </div>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Перевод и восстановление на программу</a></li>
+                            <li><a class="dropdown-item" href="#">Студенческая мобильность</a></li>
+                            <li><a class="dropdown-item" href="#">Рейтинги</a></li>
+                            <li><a class="dropdown-item" href="#">Дополнительные иностранные языки</a></li>
+                            <li><a class="dropdown-item" href="#">Как поменять учебный курс</a></li>
+                        </ul>
+                    </div>
 
-                        <!-- Выпускникам -->
-                        <div class="dropdown me-2">
-                            <button class="btn btn-outline-light dropdown-toggle border-0 rounded-bottom-0"
-                                    type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                Выпускникам
-                            </button>
-                            <ul class="dropdown-menu  shadow-lg">
-                                <li><a class="dropdown-item" href="#">Общая информация</a></li>
-                                <li><a class="dropdown-item" href="#">Центр развития карьеры</a></li>
-                                <li><a class="dropdown-item" href="#">Центр по работе с выпускниками</a></li>
-                                <li><a class="dropdown-item" href="#">Пропуск выпускника</a></li>
-                                <li><a class="dropdown-item" href="#">HSE Alumni Ambassadors</a></li>
-                                <li><a class="dropdown-item" href="#">HSE Alumni Academic Fellowship</a></li>
-                            </ul>
-                        </div>
+                    <!-- Выпускникам -->
+                    <div class="dropdown me-2">
+                        <button class="btn btn-outline-light dropdown-toggle border-0 rounded-bottom-0"
+                                type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Выпускникам
+                        </button>
+                        <ul class="dropdown-menu  shadow-lg">
+                            <li><a class="dropdown-item" href="#">Общая информация</a></li>
+                            <li><a class="dropdown-item" href="#">Центр развития карьеры</a></li>
+                            <li><a class="dropdown-item" href="#">Центр по работе с выпускниками</a></li>
+                            <li><a class="dropdown-item" href="#">Пропуск выпускника</a></li>
+                            <li><a class="dropdown-item" href="#">HSE Alumni Ambassadors</a></li>
+                            <li><a class="dropdown-item" href="#">HSE Alumni Academic Fellowship</a></li>
+                        </ul>
                     </div>
                 </div>
+                >
             </div>
         </div>
     </section>
 </div>
+<main>
+    <section class="container-fluid mt-5">
+        <div class="row pt-5 offset-2">
+            <div class="col">
+                <h3 class="fs-2 text-body-emphasis">4 года
+                    <svg xmlns="http://www.w3.org/2000/svg" class="b-inline-icon" viewBox="0 0 18 22"
+                         fill-rule="evenodd"
+                         clip-rule="evenodd" width="26" height="26">
+                        <g stroke="#000" stroke-width="1.5" fill="none" style="width: 26px;">
+                            <path d="M10.854 1.5h-4.479"></path>
+                            <circle cx="8.466" cy="12.656" r="7.716"></circle>
+                            <path d="M5.762 11.625l2.704 2.336 7.716-7.757"></path>
+                        </g>
+                    </svg>
+                </h3>
+                <p>Очная форма обучения</p>
+            </div>
+            <div class="col">
+                <h3 class="fs-2 text-body-emphasis">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="47" height="31" viewBox="0 0 47 31">
+                        <path fill="#000" fill-rule="evenodd"
+                              d="M33.026 23.242c1.459.556 2.622 1.441 3.49 2.657.868 1.215 1.302 2.587 1.302 4.115H8.856c0-2.5.937-4.41 2.813-5.73.694-.486 2.396-1.042 5.104-1.667 1.667-.208 2.57-.66 2.71-1.354.069-.278.103-1.077.103-2.396a.707.707 0 0 0-.208-.521c-.278-.278-.556-.764-.833-1.459-.14-.556-.278-1.389-.417-2.5-.278.07-.504-.035-.677-.313-.174-.278-.313-.642-.417-1.094-.104-.451-.156-.712-.156-.781-.278-1.528-.174-2.257.312-2.188-.208-.278-.382-.938-.52-1.98-.21-1.527-.105-2.882.312-4.063.486-1.32 1.354-2.326 2.604-3.02A7.473 7.473 0 0 1 23.65.008c1.389.07 2.656.487 3.802 1.25a5.721 5.721 0 0 1 2.344 3.126c.348.973.382 2.327.105 4.063-.14.834-.278 1.355-.417 1.563.208-.07.364 0 .469.208.104.209.139.47.104.782a27.2 27.2 0 0 1-.104.833 1.916 1.916 0 0 1-.157.573l-.208.73c-.07.486-.191.833-.365 1.041-.173.209-.399.278-.677.209-.139 1.528-.382 2.604-.73 3.23 0 .069-.12.243-.364.52-.243.278-.364.452-.364.521v1.146c0 .695.07 1.216.208 1.563.139.347.625.625 1.459.833.486.209 1.198.382 2.135.521.938.14 1.65.313 2.136.521zm-21.357-1.354h.104-.209.105zm-.105 0a10.154 10.154 0 0 0-2.5 1.98c-.347.763-.59 1.145-.73 1.145H0c0-2.083 1.042-3.472 3.125-4.167.07 0 .382-.07.938-.208a20.019 20.019 0 0 0 1.459-.417c.416-.139.66-.313.729-.52.07-.21.104-.765.104-1.668-1.389.14-2.5-.104-3.334-.73l.417-1.25c.07-.138.139-.33.208-.572.07-.243.105-.434.105-.573.069-.625.104-1.598.104-2.917 0-2.57.278-4.272.833-5.105.764-1.25 2.084-1.876 3.96-1.876 2.847 0 4.48 1.285 4.896 3.855.139.625.208 1.545.208 2.76v2.24c0 .765.174 1.598.521 2.501.278.556.382.868.313.938l-.625.312c-.348.14-.938.278-1.772.417-.555 0-.868.035-.937.104v1.146c0 .417.173.66.52.73.14.07.4.139.782.208.382.07.712.156.99.26.278.105.486.226.625.365.208.347.139.521-.208.521-.973.139-1.702.313-2.188.52h-.104l-.521.21h.104c.139-.07.243-.14.312-.21zm31.88-1.042c2.153.695 3.23 2.084 3.23 4.167h-8.335c-.139-.486-.694-1.146-1.667-1.98-1.18-.902-2.153-1.423-2.917-1.562h-.52c-.278 0-.504-.035-.678-.104-.173-.07-.226-.208-.156-.417.139-.208.59-.416 1.354-.625 1.042-.278 1.598-.52 1.667-.73v-1.458c-.416 0-1.042-.07-1.875-.208a20.855 20.855 0 0 1-1.146-.417c-.278-.139-.278-.52 0-1.146.208-.486.382-2.257.52-5.313.14-3.056 1.077-4.931 2.814-5.626 1.736-.695 3.403-.59 5 .313 1.39.833 2.084 2.361 2.084 4.584 0 .277-.017.798-.052 1.562a41.79 41.79 0 0 0-.052 1.771c0 .417.07.938.208 1.563.14.625.348 1.146.626 1.563.208.347.208.556 0 .625-.07.07-.174.104-.313.104s-.243.035-.313.104l-1.25.313c-.278.07-.729.104-1.354.104 0 1.111.035 1.702.104 1.771.208.209.486.382.834.521a5.47 5.47 0 0 0 1.198.313c.451.07.781.139.99.208z"/>
+                    </svg>
+                </h3>
+                <p>180 бюджетных мест</p>
+
+                <p>220 платных мест</p>
+
+                <p>10 платных мест для иностранцев</p>
+
+                <b>Иностранным абитуриентам</b>
+                <p>на программе доступны как бюджетные (стипендии Правительства РФ для иностранных граждан), так и
+                    платные
+                    места</p>
+
+            </div>
+            <div class="col">
+                <div class="fs-2 text-body-emphasis">
+                    <span class="border border-black rounded-3"><span class="p-3">RUS+ENG</span></span>
+                </div>
+                <p>Обучение ведется на русском и частично на английском языке</p>
+            </div>
+            <div class="col">
+                <h3 class="fs-2 text-body-emphasis">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="31" viewBox="0 0 38 31">
+                        <path fill="#000" fill-rule="evenodd"
+                              d="M14.25 26.917h20.583c.858 0 1.6-.305 2.227-.916.627-.61.94-1.36.94-2.251V3.167c0-.891-.313-1.641-.94-2.252C36.433.305 35.69 0 34.833 0H3.167C2.309 0 1.567.305.94.915.313 1.525 0 2.276 0 3.167V23.75c0 .89.313 1.641.94 2.251.627.61 1.369.916 2.227.916h3.166v-4.85a5.423 5.423 0 0 1-1.162-1.731 5.382 5.382 0 0 1-.421-2.128c0-1.517.544-2.82 1.633-3.909 1.088-1.088 2.391-1.632 3.909-1.632 1.517 0 2.82.544 3.909 1.632 1.088 1.089 1.632 2.392 1.632 3.91 0 .758-.14 1.467-.42 2.127a5.423 5.423 0 0 1-1.163 1.732v4.849zm-6.333-3.711v7.817l2.375-2.375 2.375 2.375v-7.817a6.629 6.629 0 0 1-1.138.396 5.082 5.082 0 0 1-1.237.148c-.43 0-.841-.05-1.237-.148a6.629 6.629 0 0 1-1.138-.396zM33.25 7.916V9.5H4.75V7.917h28.5zm0 4.75v1.584H19v-1.583h14.25zm0 4.75V19h-9.5v-1.583h9.5zm-22.958 4.75c1.088 0 2.02-.387 2.795-1.162.775-.775 1.163-1.707 1.163-2.796 0-1.088-.388-2.02-1.163-2.795-.775-.775-1.707-1.163-2.795-1.163-1.089 0-2.02.388-2.796 1.163-.775.775-1.163 1.707-1.163 2.795 0 1.089.388 2.02 1.163 2.796.775.775 1.707 1.163 2.796 1.163z"/>
+                    </svg>
+                </h3>
+                <a href="#" class="link-dark link-underline link-underline-opacity-0 red-link">Государственная
+                    аккредитация</a><br>
+
+                <a href="#" class="link-dark link-underline link-underline-opacity-0 red-link">Профессионально-общественная
+                    аккредитация</a><br>
+
+                <a href="#" class="link-dark link-underline link-underline-opacity-0 red-link">Независимая оценка
+                    качества
+                    образования</a><br>
+            </div>
+        </div>
+    </section>
+</main>
 
 <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
 </body>
