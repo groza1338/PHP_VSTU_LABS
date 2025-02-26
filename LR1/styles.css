@@ -34,3 +34,11 @@
 .red-link:hover {
     color: red !important;
 }
+
+.list-ul-dash {
+    list-style-type: none;
+}
+
+.list-ul-dash li::before {
+    content: "\2014\a0";
+}
