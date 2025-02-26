@@ -13,7 +13,7 @@
 | header                     | &check; |
 | общая информация           | &check; |
 | вкладки                    | &check; |
-| sidebar                    | &cross; |
+| aside                      | &check; |
 | более подробная информация | &check; |
 | аккордеон                  | &cross; |
 | важные объявления          | &cross; |
