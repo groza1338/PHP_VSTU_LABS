@@ -22,8 +22,11 @@
     z-index: 2;
 }
 
-.breadcrumb-item::before {
+.breadcrumb-item.white::before {
     color: white !important; /* Делаем белым */
+}
+.breadcrumb-item.black::before {
+    color: black !important; /* Делаем белым */
 }
 
 .dropdown {
