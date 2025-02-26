@@ -42,3 +42,17 @@
 .list-ul-dash li::before {
     content: "\2014\a0";
 }
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (min-width: 1600px) {
+    body {
+        max-width: 1600px; /* Максимальная ширина контента */
+        margin: 0 auto; /* Центрирование контента с белыми полями */
+        background-color: #fff; /* Белый фон */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
