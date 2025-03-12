@@ -243,6 +243,3 @@
         </div>
     </nav>
 </header>
-<script src="bootstrap/bootstrap.bundle.js"></script>
-</body>
-</html>
