@@ -224,22 +224,6 @@
                     <a class="nav-link" href="#">ЛЕТНИЕ КАНИКУЛЫ</a>
                 </li>
             </ul>
-
-            <!-- Правая часть -->
-            <ul class="navbar-nav d-flex flex-row align-items-center ms-auto gap-3">
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="public/vk-logo.svg" alt="vk-logo"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img src="public/tg-logo.svg" alt="tg-logo"></a>
-                </li>
-                <li class="nav-item mx-5">
-                    <a class="nav-link" href="#"><img style="height: 75px" src="public/glaz.svg" alt="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ" title="ВЕРСИЯ ДЛЯ СЛАБОВИДЯЩИХ"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">EN</a>
-                </li>
-            </ul>
         </div>
     </nav>
 </header>
