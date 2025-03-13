@@ -5,16 +5,16 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/LR2/bootstrap/bootstrap.css">
     <title>Новая школа</title>
-    <link rel="icon" href="public/-_1.ico" type="image/x-icon"/>
+    <link rel="icon" href="/LR2/public/-_1.ico" type="image/x-icon"/>
 </head>
 <body>
 <header>
     <nav class="navbar">
         <div class="container-fluid mx-5">
             <a class="navbar-brand" href="#">
-                <img src="public/logo.svg" alt="лого" class="img-fluid" style="height: 40px;">
+                <img src="/LR2/public/logo.svg" alt="лого" class="img-fluid" style="height: 40px;">
             </a>
 
             <!-- Левая часть -->
