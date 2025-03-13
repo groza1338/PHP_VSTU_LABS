@@ -9,7 +9,7 @@ require_once 'header.php';
                 <form class="border border-black rounded-5 shadow-lg py-5 px-5" action="login_logic.php" method="post">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" name="email" required value="<?= isset($_GET['email']) ? $_GET['email'] : '' ?>">
+                        <input type="email" class="form-control" id="exampleInputEmail1" name="email" value="<?= $_GET['email'] ?? '' ?>" required>
                     </div>
 
                     <div class="mb-3 position-relative">
