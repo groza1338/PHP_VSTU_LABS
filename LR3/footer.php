@@ -90,6 +90,6 @@
         </div>
     </div>
 </footer>
-<script src="/LR2/bootstrap/bootstrap.bundle.js"></script>
+<script src="/LR3/bootstrap/bootstrap.bundle.js"></script>
 </body>
 </html>
