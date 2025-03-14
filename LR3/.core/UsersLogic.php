@@ -1,7 +1,5 @@
 <?php
 
-use Couchbase\User;
-
 class UsersLogic
 {
     public static function signUp(

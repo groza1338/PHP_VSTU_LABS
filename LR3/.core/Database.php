@@ -2,14 +2,14 @@
 
 class Database
 {
-    private static $instance = null;
+    private static ?Database $instance = null;
 
-    private $connection = null;
+    private ?PDO $connection = null;
 
     protected function __construct()
     {
         $this->connection = new PDO(
-            'mysql:host=localhost;dbname=lr3',
+            'mysql:host=localhost;dbname=LR3',
             'root',
             '',
             [
