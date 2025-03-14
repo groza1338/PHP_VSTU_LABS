@@ -38,4 +38,18 @@ class UsersTable
         }
         return $users[0];
     }
+
+    public static function get_by_id(string $user_id)
+    {
+        $query = Database::prepare('SELECT * FROM `users` WHERE `id` = :user_id LIMIT 1');
+        $query->bindValue(':user_id', $user_id);
+        $query->execute();
+
+        $users = $query->fetchAll();
+
+        if (empty($users)) {
+            return [];
+        }
+        return $users[0];
+    }
 }
