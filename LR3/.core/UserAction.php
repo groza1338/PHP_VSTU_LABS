@@ -10,7 +10,7 @@ class UserAction
 
     public static function signUp(): array
     {
-        if ('POST' === $_SERVER['REQUEST_METHOD']) {
+        if ('POST' !== $_SERVER['REQUEST_METHOD']) {
             return [];
         }
 
