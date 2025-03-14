@@ -1,5 +1,5 @@
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 ?>
 <main class="container-fluid py-3">
     <div class="row">
@@ -45,5 +45,5 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 </script>
 
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/footer.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/footer.php");
 ?>

@@ -58,15 +58,15 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                     <div class="mb-3">
                         <span>Пол</span>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                   id="flexRadioDefault1">
+                            <input class="form-check-input" type="radio" name="gender"
+                                   id="flexRadioDefault1" value="male" checked>
                             <label class="form-check-label" for="flexRadioDefault1">
                                 Мужской
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                   id="flexRadioDefault2" checked>
+                            <input class="form-check-input" type="radio" name="gender"
+                                   id="flexRadioDefault2" value="female">
                             <label class="form-check-label" for="flexRadioDefault2">
                                 Женский
                             </label>
@@ -140,5 +140,5 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
     </script>
 
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/footer.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/footer.php");
 ?>
