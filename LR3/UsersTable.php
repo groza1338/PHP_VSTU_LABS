@@ -4,7 +4,7 @@ class UsersTable
 {
     public static function create(
         string $email, string $password, string $fio, string $birthday, string $address, string $gender, string $interests, string $vk_profile, string $blood_type, string $Rh_factor
-    )
+    ): void
     {
         $query = Database::prepare(
             'INSERT INTO `users` (email, hash_password, FIO, birthday, address, gender, interests, vk_profile, blood_type, Rh_factor) VALUES (:email, :password, :fio, :birthday, :address, :gender, :interests, :vk_profile, :blood_type, :Rh_factor)'

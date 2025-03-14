@@ -8,6 +8,7 @@ class UsersLogic
         string $email, string $password, string $fio, string $birthday, string $address, string $gender, string $interests, string $vk_profile, string $blood_type, string $Rh_factor
     ) : array
     {
+        // TODO: Дописать
         return [];
     }
 
