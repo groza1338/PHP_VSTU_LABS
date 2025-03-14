@@ -1,12 +1,12 @@
 <?php
-require_once 'login_logic.php';
+require_once 'auth_logic.php';
 require_once 'header.php';
 ?>
 <main class="container-fluid py-5">
     <div class="row">
         <div class="col-md-5 mx-auto">
             <h1 class="text-center">Вход в систему</h1>
-            <form class="border border-black rounded-5 shadow-lg py-5 px-5" action="login_logic.php" method="post">
+            <form class="border border-black rounded-5 shadow-lg py-5 px-5" method="post">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" name="email" value="<?= $_GET['email'] ?? '' ?>" required>
