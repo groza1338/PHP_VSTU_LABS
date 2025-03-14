@@ -3,7 +3,7 @@
 class UsersLogic
 {
     public static function signUp(
-        string $email, string $password, string $fio, string $birthday, string $address, string $gender, string $interests, string $vk_profile, string $blood_type, string $Rh_factor
+        string $email, string $password, string $password2, string $fio, string $birthday, string $address, string $gender, string $interests, string $vk_profile, string $blood_type, string $Rh_factor
     ) : array
     {
         // TODO: Дописать
