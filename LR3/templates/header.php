@@ -10,7 +10,7 @@
     <link rel="icon" href="/LR3/public/-_1.ico" type="image/x-icon"/>
 </head>
 <body>
-<header>
+<header class="border-bottom border-black">
     <nav class="navbar">
         <div class="container-fluid mx-5">
             <a class="navbar-brand" href="#">
