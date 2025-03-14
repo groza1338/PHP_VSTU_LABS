@@ -31,7 +31,11 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
     document.getElementById("registerBtn").addEventListener("click", function (event) {
         event.preventDefault();
         let emailValue = document.getElementById("exampleInputEmail1").value;
-        window.location.href = "register.php?email=" + encodeURIComponent(emailValue);
+        if (emailValue) {
+            window.location.href = "register.php?email=" + encodeURIComponent(emailValue);
+        } else {
+            window.location.href = "register.php" + encodeURIComponent(emailValue);
+        }
     });
 
     document.getElementById("togglePassword").addEventListener("click", function () {
