@@ -23,6 +23,17 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                         </div>
                     </div>
 
+                    <div class="mb-3 position-relative">
+                        <label for="exampleInputPassword2" class="form-label">Пароль еще раз</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="exampleInputPassword2" name="password"
+                                   required>
+                            <button class="btn btn-outline-secondary" type="button" id="togglePassword1">
+                                👁️
+                            </button>
+                        </div>
+                    </div>
+
                     <div class="mb-3">
                         <label>ФИО
                             <input type="text" class="form-control" name="fio"
@@ -114,6 +125,13 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
         });
 
         document.getElementById("togglePassword").addEventListener("click", function () {
+            let passwordField = document.getElementById("exampleInputPassword1");
+            let passwordField1 = document.getElementById('exampleInputPassword2')
+            passwordField.type = passwordField.type === "password" ? "text" : "password";
+            passwordField1.type = passwordField.type;
+        });
+
+        document.getElementById("togglePassword1").addEventListener("click", function () {
             let passwordField = document.getElementById("exampleInputPassword1");
             let passwordField1 = document.getElementById('exampleInputPassword2')
             passwordField.type = passwordField.type === "password" ? "text" : "password";
