@@ -1,6 +1,5 @@
 <?php
-require_once 'auth_logic.php';
-require_once 'header.php';
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 ?>
 <main class="container-fluid py-5">
     <div class="row">
@@ -42,5 +41,5 @@ require_once 'header.php';
 </script>
 
 <?php
-require_once 'footer.php';
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/footer.php");
 ?>

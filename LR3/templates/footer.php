@@ -3,12 +3,12 @@
 
         <!--  HR -->
         <div class="d-flex justify-content-center">
-            <img src="public/hr.svg" alt="" class="opacity-25 mb-5" style="width: 75%;">
+            <img src="/LR3/public/hr.svg" alt="" class="opacity-25 mb-5" style="width: 75%;">
         </div>
 
         <div class="row offset-1 text-white">
             <div class="col-3 pe-0 ps-0">
-                <img src="public/logo-white.svg" alt="лого" class="img-fluid mb-4" style="width: 250px;">
+                <img src="/LR3/public/logo-white.svg" alt="лого" class="img-fluid mb-4" style="width: 250px;">
                 <p class="mb-5">
                     Новая школа на Мосфильмовской — это частная школа, которая работает как образовательный центр.
                     Курсы, мастер-классы, лекции, встречи с интересными людьми, концерты, спектакли открыты для всех,
