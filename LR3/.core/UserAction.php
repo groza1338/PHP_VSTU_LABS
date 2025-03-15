@@ -1,4 +1,5 @@
 <?php
+require_once ($_SERVER['DOCUMENT_ROOT'].'/LR3/.core/index.php');
 
 class UserAction
 {

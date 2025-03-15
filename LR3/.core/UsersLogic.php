@@ -1,4 +1,5 @@
 <?php
+require_once ($_SERVER['DOCUMENT_ROOT'].'/LR3/.core/Validator.php');
 
 class UsersLogic
 {
@@ -6,7 +7,25 @@ class UsersLogic
         string $email, string $password, string $password2, string $fio, string $birthday, string $address, string $gender, string $interests, string $vk_profile, string $blood_type, string $Rh_factor
     ) : array
     {
-        // TODO: Дописать
+        
+        Validator::emptyErrors();
+        Validator::validateEmail($email);
+        Validator::validatePassword($password, $password2);
+        Validator::validateFio($fio);
+        Validator::validateBirthday($birthday);
+        Validator::validateGender($gender);
+        Validator::validateVkProfile($vk_profile);
+        Validator::validateBloodType($blood_type);
+        Validator::validateRHFactor($Rh_factor);
+
+        $errors = Validator::getErrors();
+        if (!empty($errors)) {
+            return $errors;
+        }
+
+        $password = password_hash($password, PASSWORD_DEFAULT);
+
+        UsersTable::create($email, $password, $fio, $birthday, $address, $gender, $interests, $vk_profile, $blood_type, $Rh_factor);
         return [];
     }
 
@@ -19,6 +38,7 @@ class UsersLogic
         }
 
         $user = UsersTable::get_by_email($email);
+
         if (!$user) {
             return "Пользователь с таким email не найден";
         }

@@ -1,5 +1,8 @@
 <?php
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/.core/Database.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/.core/UserAction.php");
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
+$errors = UserAction::signUp();
 ?>
     <main class="container-fluid py-3">
         <div class="row">
@@ -86,7 +89,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                     </div>
 
                     <div class="mb-3">
-                        <select class="form-select" aria-label="Группа крови" required>
+                        <select class="form-select" aria-label="Группа крови" name="blood_type" required>
                             <option selected>Группа крови</option>
                             <option value="1">I</option>
                             <option value="2">II</option>
