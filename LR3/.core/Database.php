@@ -24,7 +24,7 @@ class Database
 
     }
 
-    protected function __wakeup() {
+    public function __wakeup() {
         throw new \BadMethodCallException("Unable to deserialize database connection.");
     }
 
