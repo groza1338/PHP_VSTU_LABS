@@ -107,7 +107,7 @@ $errors = UserAction::signUp();
                     </div>
 
 
-                    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                    <button type="submit" name="action" value="signUp" class="btn btn-primary">Зарегистрироваться</button>
                     <button id="loginBtn" class="btn btn-secondary">Авторизация</button>
                 </form>
             </div>
