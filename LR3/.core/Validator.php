@@ -2,59 +2,68 @@
 
 class Validator
 {
-    public static function validateEmail(string $email) : ?string {
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            return "Некорректный адрес почты";
-        }
-        return null;
+    private static array $errors = [];
+    
+    public static function getErrors(): array
+    {
+        return self::$errors;
     }
 
-    public static function validatePassword(string $password, string $password2) : ?string {
+    public static function emptyErrors(): void
+    {
+        self::$errors = [];
+    }
+    
+    public static function validateEmail(string $email) : void 
+    {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            self::$errors[] = "Некорректный адрес почты";
+        }
+    }
+
+    public static function validatePassword(string $password, string $password2) : void
+    {
         if ($password !== $password2) {
-            return "Введенные пароли не совпадают";
+            self::$errors[] = "Введенные пароли не совпадают";
         }
 
         if (strlen($password) <= 6) {
-            return "Пароль должен быть длиннее 6 символов";
+            self::$errors[] = "Пароль должен быть длиннее 6 символов";
         }
 
         if (!preg_match("/[A-Z]/", $password)) {
-            return "Пароль должен содержать хотя бы одну заглавную латинскую букву";
+            self::$errors[] = "Пароль должен содержать хотя бы одну заглавную латинскую букву";
         }
 
         if (!preg_match("/[a-z]/", $password)) {
-            return "Пароль должен содержать хотя бы одну строчную латинскую букву";
+            self::$errors[] = "Пароль должен содержать хотя бы одну строчную латинскую букву";
         }
 
         if (!preg_match("/[\W_]/", $password)) {
-            return "Пароль должен содержать хотя бы один спецсимвол (например, !, @, #, $, %, &, *, и т.д.)";
+            self::$errors[] = "Пароль должен содержать хотя бы один спецсимвол (например, !, @, #, $, %, &, *, и т.д.)";
         }
 
         if (!preg_match("/[ \-_]/", $password)) {
-            return "Пароль должен содержать пробел, дефис или подчеркивание";
+            self::$errors[] = "Пароль должен содержать пробел, дефис или подчеркивание";
         }
 
         if (preg_match("/[А-я]/u", $password)) {
-            return "Пароль не должен содержать русские буквы";
+            self::$errors[] = "Пароль не должен содержать русские буквы";
         }
 
         if (!preg_match("/\d/", $password)) {
-            return "Пароль должен содержать хотя бы одну цифру";
+            self::$errors[] = "Пароль должен содержать хотя бы одну цифру";
         }
-
-        return null;
     }
 
-    public static function validateFio(string $fio) : ?string
+    public static function validateFio(string $fio) : void
     {
         if (!preg_match("/[А-ЯËA-Z][а-яёa-z]+ [А-ЯËA-Z][а-яёa-z]+ [А-ЯËA-Z][а-яёa-z]+/u", $fio)) {
-            return "ФИО должно быть в формате: Фамилия Имя Отчество (с заглавной буквы)";
+            self::$errors[] = "ФИО должно быть в формате: Фамилия Имя Отчество (с заглавной буквы)";
         }
-
-        return null;
     }
 
-    public static function validateBirthday(string $birthday) : ?string
+    public static function validateBirthday(string $birthday) : void
     {
         $today = new DateTime();
         $minDate = new DateTime();
@@ -63,33 +72,29 @@ class Validator
         $input_date = DateTime::createFromFormat('Y-m-d', $birthday);
 
         if (!$input_date) {
-            return "Неверный формат даты. Используйте формат: ГГГГ-ММ-ДД";
+            self::$errors[] = "Неверный формат даты. Используйте формат: ГГГГ-ММ-ДД";
         }
 
         if ($input_date > $today) {
-            return "Дата не может быть в будущем";
+            self::$errors[] = "Дата не может быть в будущем";
         }
 
         if ($input_date < $minDate) {
-            return "Дата не может быть раньше 150 лет назад";
+            self::$errors[] = "Дата не может быть раньше 150 лет назад";
         }
-
-        return null;
     }
 
-    public static function validateGender(string $gender) : ?string
+    public static function validateGender(string $gender) : void
     {
         if (!in_array($gender, ['male', 'female'])) {
-            return "Выбран несуществующий пол";
+            self::$errors[] = "Выбран несуществующий пол";
         }
-
-        return null;
     }
 
-    public static function validateVkProfile(string $vkProfile) : ?string
+    public static function validateVkProfile(string $vkProfile) : void
     {
         if (!filter_var($vkProfile, FILTER_VALIDATE_URL)) {
-            return "Вы ввели неверную ссылку";
+            self::$errors[] = "Вы ввели неверную ссылку";
         }
 
         // Получаем HTML контент страницы через file_get_contents
@@ -97,45 +102,21 @@ class Validator
 
         // Проверяем, если страница не найдена (например, ошибка 404)
         if ($html === false) {
-            return "Страница не найдена.";
+            self::$errors[] = "Страница не найдена.";
         }
-
-        // Создаём объект DOMDocument
-        $dom = new DOMDocument();
-
-        // Для того, чтобы избежать предупреждений о невалидном HTML
-        libxml_use_internal_errors(true);
-        $dom->loadHTML($html);
-        libxml_clear_errors();
-
-        // Ищем все элементы с классом "ProfileInfo"
-        $xpath = new DOMXPath($dom);
-        $elements = $xpath->query('//*[@class="ProfileInfo"]');
-
-        // Проверяем, если элементы найдены
-        if ($elements->length === 0) {
-            return "Это ссылка не на профиль ВК!";
-        }
-
-        return null;
     }
 
-    public static function validateBloodType(string $bloodType) : ?string
+    public static function validateBloodType(string $bloodType) : void
     {
-        if (!in_array($bloodType, ['I', 'II', 'III', 'IV'])) {
-            return "Выбрана несуществующая группа крови";
+        if (!in_array($bloodType, ['1', '2', '3', '4'])) {
+            self::$errors[] = "Выбрана несуществующая группа крови";
         }
-
-        return null;
     }
 
-    public static function validateRHFactor(string $rhFactor) : ?string
+    public static function validateRHFactor(string $rhFactor) : void
     {
         if (!in_array($rhFactor, ['+', '-'])) {
-            return "Выбран несуществующий резус-фактор";
+            self::$errors[] = "Выбран несуществующий резус-фактор";
         }
-
-        return null;
     }
-
 }
