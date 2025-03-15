@@ -15,7 +15,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                     <div class="mb-3 position-relative">
                         <label for="exampleInputPassword1" class="form-label">Пароль</label>
                         <div class="input-group">
-                            <input type="password" class="form-control" id="exampleInputPassword1" name="password"
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password1"
                                    required>
                             <button class="btn btn-outline-secondary" type="button" id="togglePassword">
                                 👁️
@@ -26,7 +26,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                     <div class="mb-3 position-relative">
                         <label for="exampleInputPassword2" class="form-label">Пароль еще раз</label>
                         <div class="input-group">
-                            <input type="password" class="form-control" id="exampleInputPassword2" name="password"
+                            <input type="password" class="form-control" id="exampleInputPassword2" name="password2"
                                    required>
                             <button class="btn btn-outline-secondary" type="button" id="togglePassword1">
                                 👁️

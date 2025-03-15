@@ -19,7 +19,7 @@ class UserAction
         }
 
         $errors = UsersLogic::signUp(
-            $_POST['email'],$_POST['password'], $_POST['password2'], $_POST['fio'], $_POST['birthday'], $_POST['address'], $_POST['gender'], $_POST['interests'], $_POST['vk_profile'], $_POST['blood_type'], $_POST['Rh_factor']
+            $_POST['email'], $_POST['password1'], $_POST['password2'], $_POST['fio'], $_POST['birthday'], $_POST['address'], $_POST['gender'], $_POST['interests'], $_POST['vk_profile'], $_POST['blood_type'], $_POST['Rh_factor']
         );
 
         if (empty($errors)) {
