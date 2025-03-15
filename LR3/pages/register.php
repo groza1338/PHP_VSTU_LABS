@@ -99,7 +99,7 @@ $errors = UserAction::signUp();
                     </div>
 
                     <div class="mb-3">
-                        <select class="form-select" aria-label="Резус-фактор" required>
+                        <select class="form-select" aria-label="Резус-фактор" name="Rh_factor" required>
                             <option selected>Резус-фактор</option>
                             <option value="+">+</option>
                             <option value="-">-</option>
