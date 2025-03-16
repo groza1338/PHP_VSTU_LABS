@@ -24,7 +24,7 @@ class UserAction
         );
 
         if (empty($errors)) {
-            header("Location " . $_SERVER['PHP_SELF'] . "?success=y");
+            header("Location: " . $_SERVER['PHP_SELF'] . "?success=y");
             die();
         }
 
