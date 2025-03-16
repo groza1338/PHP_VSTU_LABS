@@ -5,8 +5,22 @@ class UserAction
 {
     public static function signIn(): string
     {
-        // TODO: Дописать
-        return '';
+        if ('POST' !== $_SERVER['REQUEST_METHOD']) {
+            return '';
+        }
+
+        if ('signIn' !== $_POST['action']) {
+            return '';
+        }
+
+        $errors = UsersLogic::signIn($_POST['email'], $_POST['password']);
+
+        if (empty($errors)) {
+            header("Location: " . $_SERVER['PHP_SELF'] . "?success=y");
+            die();
+        }
+
+        return $errors;
     }
 
     public static function signUp(): array

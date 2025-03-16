@@ -1,4 +1,8 @@
 <?php
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/.core/Database.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/.core/UserAction.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/LR3/.core/index.php');
+$error = UserAction::signIn();
 require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 ?>
 <main class="container-fluid py-3">
@@ -20,7 +24,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                         </button>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Войти</button>
+                <button type="submit" class="btn btn-primary" name="action" value="signIn">Войти</button>
                 <button id="registerBtn" class="btn btn-secondary">Регистрация</button>
             </form>
         </div>
