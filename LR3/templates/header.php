@@ -1,3 +1,8 @@
+<?php
+require_once ($_SERVER['DOCUMENT_ROOT'].'/LR3/.core/index.php');
+UserAction::signOut();
+$currentUser = UsersLogic::currentUser();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -223,6 +228,25 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">ЛЕТНИЕ КАНИКУЛЫ</a>
                 </li>
+                <?php if (empty($currentUser)): ?>
+                    <div class="d-flex flex-column align-items-end">
+                        <span>Вы не авторизованы</span>
+                        <div class="d-flex">
+                            <a class="text-orange hover-darkorange" href="<?='../pages/login.php'?>">Ввести логин и пароль</a>
+                            <span class="mx-1">или</span>
+                            <a class="text-orange hover-darkorange" href="<?='../pages/register.php'?>">зарегистрироваться</a>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <div class="d-flex align-items-center gap-2">
+                        <span>Вы авторизованы как <span class="text-orange"><?php echo $currentUser['email'] ?></span></span>
+                        <form method="post" style="display:inline;">
+                            <button type="submit" name="action" value="signOut" class="btn btn-dark hover-orange py-1" style="font-size: 14px;">
+                                Выйти
+                            </button>
+                        </form>
+                    </div>
+                <?php endif; ?>
             </ul>
         </div>
     </nav>

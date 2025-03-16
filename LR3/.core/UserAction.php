@@ -44,4 +44,17 @@ class UserAction
 
         return $errors;
     }
+
+    public static function SignOut(): void
+    {
+        if ('POST' !== $_SERVER['REQUEST_METHOD']) {
+            return;
+        }
+
+        if ('signOut' !== $_POST['action']) {
+            return;
+        }
+
+        UsersLogic::signOut();
+    }
 }
