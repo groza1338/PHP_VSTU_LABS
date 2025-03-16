@@ -50,7 +50,7 @@ class UsersLogic
             return "Пользователь с таким email не найден";
         }
 
-        if (password_hash($password, PASSWORD_DEFAULT) !== $user['password']) {
+        if (!password_verify($password, $user['hash_password'])) {
             return "Неверно указан пароль";
         }
 
