@@ -10,6 +10,13 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
         <div class="col-md-5 mx-auto">
             <h1 class="text-center pb-3">Вход в систему</h1>
             <form class="border border-black rounded-5 shadow-lg py-5 px-5" method="post">
+                <?php
+                if (!empty($error)) {
+                    echo "<div class='mb-3 text-danger'>";
+                    echo $error;
+                    echo "</div>";
+                }
+                ?>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" name="email" value="<?= $_GET['email'] ?? '' ?>" required>
