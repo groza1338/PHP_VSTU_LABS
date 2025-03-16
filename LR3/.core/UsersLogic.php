@@ -71,7 +71,7 @@ class UsersLogic
 
     public static function currentUser() : array
     {
-        if (static::isAuthorized()) {
+        if (!static::isAuthorized()) {
             return [];
         }
 
