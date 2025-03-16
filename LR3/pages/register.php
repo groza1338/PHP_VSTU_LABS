@@ -1,14 +1,23 @@
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/.core/Database.php");
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/.core/UserAction.php");
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 $errors = UserAction::signUp();
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 ?>
     <main class="container-fluid py-3">
         <div class="row">
             <div class="col-md-5 mx-auto">
                 <h1 class="text-center pb-3">Регистрация</h1>
                 <form class="border border-black rounded-5 shadow-lg py-5 px-5" method="post">
+                    <?php
+                    if (!empty($errors)) {
+                        echo "<div class='mb-3 text-danger'>";
+                        foreach ($errors as $error) {
+                            echo $error;
+                        }
+                        echo "</div>";
+                    }
+                    ?>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" name="email"
