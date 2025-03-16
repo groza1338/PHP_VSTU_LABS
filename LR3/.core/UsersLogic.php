@@ -25,7 +25,14 @@ class UsersLogic
 
         $password = password_hash($password, PASSWORD_DEFAULT);
 
-        UsersTable::create($email, $password, $fio, $birthday, $address, $gender, $interests, $vk_profile, $blood_type, $Rh_factor);
+        try {
+            if (!empty(UsersTable::get_by_email($email))) {
+                return ['Такой email уже используется'];
+            }
+            UsersTable::create($email, $password, $fio, $birthday, $address, $gender, $interests, $vk_profile, $blood_type, $Rh_factor);
+        } catch (Exception $e) {
+            return [$e->getMessage()];
+        }
         return [];
     }
 
