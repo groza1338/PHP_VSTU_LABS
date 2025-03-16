@@ -1,7 +1,7 @@
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'].'/LR3/.core/index.php');
 
-class UserAction
+class UsersActions
 {
     public static function signIn(): string
     {

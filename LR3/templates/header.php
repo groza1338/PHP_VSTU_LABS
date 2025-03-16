@@ -1,6 +1,6 @@
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'].'/LR3/.core/index.php');
-UserAction::signOut();
+UsersActions::signOut();
 $currentUser = UsersLogic::currentUser();
 ?>
 <!doctype html>

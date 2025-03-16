@@ -1,7 +1,7 @@
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/.core/Database.php");
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/.core/UserAction.php");
-$errors = UserAction::signUp();
+require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/.core/UsersActions.php");
+$errors = UsersActions::signUp();
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 ?>
     <main class="container-fluid py-3">
