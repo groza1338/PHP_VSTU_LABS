@@ -19,6 +19,10 @@ class Validator
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             self::$errors[] = "Некорректный адрес почты";
         }
+
+        if (strlen($email) > 255) {
+            self::$errors[] = "В почте не должно быть больше 255 символов";
+        }
     }
 
     public static function validatePassword(string $password, string $password2) : void
@@ -29,6 +33,10 @@ class Validator
 
         if (strlen($password) <= 6) {
             self::$errors[] = "Пароль должен быть длиннее 6 символов";
+        }
+
+        if (strlen($password) > 255) {
+            self::$errors[] = "Пароль должен быть короче 256 символов";
         }
 
         if (!preg_match("/[A-Z]/", $password)) {
@@ -60,6 +68,10 @@ class Validator
     {
         if (!preg_match("/[А-ЯËA-Z][а-яёa-z]+ [А-ЯËA-Z][а-яёa-z]+ [А-ЯËA-Z][а-яёa-z]+/u", $fio)) {
             self::$errors[] = "ФИО должно быть в формате: Фамилия Имя Отчество (с заглавной буквы)";
+        }
+
+        if (strlen($fio) > 255) {
+            self::$errors[] = "В ФИО не должно быть больше 255 символов";
         }
     }
 
@@ -103,6 +115,10 @@ class Validator
         // Проверяем, если страница не найдена (например, ошибка 404)
         if ($html === false) {
             self::$errors[] = "Страница не найдена.";
+        }
+
+        if (strlen($vkProfile) > 255) {
+            self::$errors[] = "В ссылке на профиль ВК не должно быть больше 255 символов";
         }
     }
 
