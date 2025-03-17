@@ -119,4 +119,18 @@ class Validator
             self::$errors[] = "Выбран несуществующий резус-фактор";
         }
     }
+
+    public static function validateInterest(string $interest) : void
+    {
+        if (strlen($interest) > 255) {
+            self::$errors[] = "В интересах не должно быть более 255 символов";
+        }
+    }
+
+    public static function validateAddress(string $address) : void
+    {
+        if (strlen($address) > 255) {
+            self::$errors[] = "В адресе не должно быть более 255 символов";
+        }
+    }
 }

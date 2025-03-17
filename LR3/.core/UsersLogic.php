@@ -13,7 +13,9 @@ class UsersLogic
         Validator::validatePassword($password, $password2);
         Validator::validateFio($fio);
         Validator::validateBirthday($birthday);
+        Validator::validateAddress($address);
         Validator::validateGender($gender);
+        Validator::validateInterest($interests);
         Validator::validateVkProfile($vk_profile);
         Validator::validateBloodType($blood_type);
         Validator::validateRHFactor($Rh_factor);
