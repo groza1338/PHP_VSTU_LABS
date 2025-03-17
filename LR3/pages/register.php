@@ -69,14 +69,14 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                         <span>Пол</span>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gender"
-                                   id="flexRadioDefault1" value="male" <?= $_POST['gender']==='male' ? 'checked' : '' ?>>
+                                   id="flexRadioDefault1" value="male" <?= empty($_POST['gender']) || $_POST['gender']==='male' ? 'checked' : '' ?>>
                             <label class="form-check-label" for="flexRadioDefault1">
                                 Мужской
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="gender"
-                                   id="flexRadioDefault2" value="female" <?= $_POST['gender']==='female' ? 'checked' : '' ?>>
+                                   id="flexRadioDefault2" value="female" <?= isset($_POST['gender']) && $_POST['gender'] === 'female' ? 'checked' : '' ?>>
                             <label class="form-check-label" for="flexRadioDefault2">
                                 Женский
                             </label>
