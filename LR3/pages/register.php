@@ -102,7 +102,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                             $blood_types = ['1' => 'I', '2'=>'II', '3'=>'III', '4'=>'IV'];
 
                             foreach ($blood_types as $type => $name) {
-                                $selected = htmlspecialchars($_POST['blood_type'] == $type ? 'selected' : '');
+                                $selected = (isset($_POST['blood_type']) && $_POST['blood_type'] == $type) ? 'selected' : '';
                                 echo "<option value={$type} " . $selected .">{$name}</option>";
                             }
                             ?>
