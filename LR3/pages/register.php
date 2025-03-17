@@ -115,7 +115,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                             <?php
                             $rh_factors = ['+' => '+', '-' => '-'];
                             foreach ($rh_factors as $rh_factor => $name) {
-                                $selected = htmlspecialchars($_POST['Rh_factor'] == $rh_factor ? 'selected' : '');
+                                $selected = (isset($_POST['Rh_factor']) && $_POST['Rh_factor']  === $rh_factor) ? 'selected' : '';
                                 echo "<option value={$rh_factor} " . $selected .">{$name}</option>";
                             }
                             ?>
