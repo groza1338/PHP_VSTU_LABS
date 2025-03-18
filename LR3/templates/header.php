@@ -1,5 +1,5 @@
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'].'/LR3/.core/index.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/LR3/.core/index.php');
 UsersActions::signOut();
 $currentUser = UsersLogic::currentUser();
 ?>
@@ -15,239 +15,57 @@ $currentUser = UsersLogic::currentUser();
     <link rel="icon" href="/LR3/public/-_1.ico" type="image/x-icon"/>
 </head>
 <body>
-<header class="border-bottom border-black">
-    <nav class="navbar">
-        <div class="container-fluid mx-5">
-            <a class="navbar-brand" href="#">
+<header class="p-3 mb-3 border-bottom">
+    <div class="container-fluid">
+        <div class="d-flex flex-nowrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none me-auto">
                 <img src="/LR3/public/logo.svg" alt="лого" class="img-fluid" style="height: 40px;">
             </a>
 
-            <!-- Левая часть -->
-            <ul class="navbar-nav d-flex flex-row align-items-center me-auto gap-3">
-                <li class="nav-item dropdown">
-                    <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        ШКОЛА
-                    </a>
-                    <ul class="dropdown-menu overflow-auto" style="max-height: 10rem">
-                        <li>
-                            <a class="dropdown-item" href="#">О нас</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Фонд "Дар"</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Команда</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Новости</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Поступление</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Стоимость обучения и стипендии</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Работа в школе</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Продюсерский центр</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">СМИ о нас</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Экскурсия по школе</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Отчёты</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Сведения об образовательной организации</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Контакты</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">ЭЛЖУР</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        ОБУЧЕНИЕ
-                    </a>
-                    <ul class="dropdown-menu overflow-auto" style="max-height: 10rem">
-                        <li>
-                            <a class="dropdown-item" href="#">Поступление</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Стоимость обучения и стипендии</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Подростковая школа 5-8 классы</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Старшая школа 9-11 классы</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Вторая смена</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Заочка</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Успехи новошкольников</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Проектная деятельность</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">
-                        ДЕТЯМ
-                    </a>
-                    <ul class="dropdown-menu overflow-auto" style="max-height: 10rem">
-                        <li>
-                            <a class="dropdown-item" href="#">Поступление</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Зимняя школа</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Кружки для всех</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Каникулы в Новой школе</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Семейные программы</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Заочка</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Вторая смена</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Старшая школа Микс</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Профориентационные экскурсии</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Дошкольное отделение</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Тьюторские консультации</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Видео курсов</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">День рождения в школе</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Магазин</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Подарочный сертификат</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">ВЗРОСЛЫМ</a>
-                    <ul class="dropdown-menu overflow-auto" style="max-height: 10rem">
-                        <li>
-                            <a class="dropdown-item" href="#">Работа в школе</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Курсы</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Семейные программы</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Видео курсов</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Образовательные экскурсии по школе</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Аренда помещений</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Магазин</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Подарочный сертификат</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">ПРЕПОДАВАТЕЛЯМ</a>
-                    <ul class="dropdown-menu overflow-auto" style="max-height: 10rem">
-                        <li>
-                            <a class="dropdown-item" href="#">Работа в школе</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Курсы</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Стажировки для тьюторов</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Видео курсов</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Образовательные экскурсии по школе</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Аренда помещений</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Магазин</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Подарочный сертификат</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">МАГАЗИН</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">КРУЖКИ ДЛЯ ВСЕХ</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">ЛЕТНИЕ КАНИКУЛЫ</a>
-                </li>
-                <?php if (empty($currentUser)): ?>
-                    <div class="d-flex flex-column align-items-end">
-                        <span>Вы не авторизованы</span>
-                        <div class="d-flex">
-                            <a class="text-orange hover-darkorange" href="<?='../pages/login.php'?>">Ввести логин и пароль</a>
-                            <span class="mx-1">или</span>
-                            <a class="text-orange hover-darkorange" href="<?='../pages/register.php'?>">зарегистрироваться</a>
-                        </div>
-                    </div>
-                <?php else: ?>
-                    <div class="d-flex align-items-center gap-2">
-                        <span>Вы авторизованы как <span class="text-orange"><?php echo $currentUser['email'] ?></span></span>
-                        <form method="post" style="display:inline;">
-                            <button type="submit" name="action" value="signOut" class="btn btn-dark hover-orange py-1" style="font-size: 14px;">
-                                Выйти
-                            </button>
-                        </form>
-                    </div>
-                <?php endif; ?>
+            <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0 me-auto">
+                <li><a href="#" class="nav-link px-2 link-body-emphasis">ШКОЛА</a></li>
+                <li><a href="#" class="nav-link px-2 link-body-emphasis">ОБУЧЕНИЕ</a></li>
+                <li><a href="#" class="nav-link px-2 link-body-emphasis">ДЕТЯМ</a></li>
+                <li><a href="#" class="nav-link px-2 link-body-emphasis">ВЗРОСЛЫМ</a></li>
+                <li><a href="#" class="nav-link px-2 link-body-emphasis">ПРЕПОДАВАТЕЛЯМ</a></li>
+                <li><a href="#" class="nav-link px-2 link-body-emphasis">МАГАЗИН</a></li>
+                <li><a href="#" class="nav-link px-2 link-body-emphasis">КРУЖКИ ДЛЯ ВСЕХ</a></li>
+                <li><a href="#" class="nav-link px-2 link-body-emphasis">ЛЕТНИЕ КАНИКУЛЫ</a></li>
             </ul>
+
+            <div class="dropdown text-end">
+                <?php if (!empty($currentUser)): ?>
+                    <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://picsum.photos/32/32" alt="profile_img" width="32" height="32"
+                             class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small" style="">
+                        <li>
+                            <div class="dropdown-item-text">
+                                <?=$currentUser['email']?>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown-item-text">
+                                <?=$currentUser['FIO']?>
+                            </div>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Настройки</a></li>
+                        <li><a class="dropdown-item" href="#">Профиль</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <form method="POST">
+                                <button type="submit" class="dropdown-item text-danger">Выйти</button>
+                                <input type="hidden" name="action" value="signOut">
+                            </form>
+                    </ul>
+                <?php else: ?>
+                    <a type="button" href="../pages/login.php" class="btn btn-primary me-2">Войти</a>
+                    <a type="button" href="../pages/register.php" class="btn btn-warning">Зарегистрироваться</a>
+                <?php endif; ?>
+            </div>
         </div>
-    </nav>
+    </div>
 </header>
