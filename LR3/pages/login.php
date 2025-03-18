@@ -25,7 +25,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                 <div class="mb-3 position-relative">
                     <label for="exampleInputPassword1" class="form-label">Пароль</label>
                     <div class="input-group">
-                        <input type="password" class="form-control" id="exampleInputPassword1" name="password" value="<?=htmlspecialchars($_POST['password'])?>" required>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password" required>
                         <button class="btn btn-outline-secondary" type="button" id="togglePassword">
                             👁️
                         </button>
