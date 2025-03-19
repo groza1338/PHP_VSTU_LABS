@@ -3,7 +3,7 @@
 
         <!--  HR -->
         <div class="d-flex justify-content-center">
-            <img src="/LR3/public/hr.svg" alt="" class="opacity-25 mb-5" style="width: 75%;">
+            <img src="../public/hr.svg" alt="" class="opacity-25 mb-5" style="width: 75%;">
         </div>
 
         <div class="row offset-1 text-white">
@@ -37,7 +37,6 @@
                 <a href="#" class="text-white link-underline-warning d-block mb-2">Сведения об<br>образовательной<br>организации</a>
                 <a href="#" class="text-white link-underline-warning d-block mb-2">Контакты</a>
                 <a href="#" class="text-white link-underline-warning d-block mb-2">ЭЛЖУР</a>
-
             </div>
             <div class="col pe-0 ps-0">
                 <p class="mb-5">ДЕТЯМ</p>
@@ -85,7 +84,6 @@
                 <a href="#" class="text-white link-underline-warning d-block mb-2">Заочка</a>
                 <a href="#" class="text-white link-underline-warning d-block mb-2">Успехи новошкольников</a>
                 <a href="#" class="text-white link-underline-warning d-block mb-2">Проектная деятельность</a>
-
             </div>
         </div>
     </div>
