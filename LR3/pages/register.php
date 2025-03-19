@@ -1,6 +1,6 @@
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/.core/Database.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/.core/UsersActions.php");
+require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/.core/Users/UsersActions.php");
 $errors = UsersActions::signUp();
 require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 ?>

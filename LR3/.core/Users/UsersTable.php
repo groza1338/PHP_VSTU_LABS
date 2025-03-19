@@ -1,6 +1,4 @@
 <?php
-require_once "Database.php";
-
 class UsersTable
 {
     public static function create(
