@@ -20,13 +20,13 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" name="email"
-                               value="<?= htmlspecialchars($_POST['email'] ?? $_GET['email'] ?? '') ?>" required>
+                               value="<?= htmlspecialchars($_POST['email'] ?? $_GET['email'] ?? '') ?>" maxlength="255" required>
                     </div>
 
                     <div class="mb-3 position-relative">
                         <label for="exampleInputPassword1" class="form-label">Пароль</label>
                         <div class="input-group">
-                            <input type="password" class="form-control" id="exampleInputPassword1" name="password1" required>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password1" maxlength="255" required>
                             <button class="btn btn-outline-secondary" type="button" id="togglePassword">
                                 👁️
                             </button>
@@ -36,7 +36,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                     <div class="mb-3 position-relative">
                         <label for="exampleInputPassword2" class="form-label">Пароль еще раз</label>
                         <div class="input-group">
-                            <input type="password" class="form-control" id="exampleInputPassword2" name="password2" required>
+                            <input type="password" class="form-control" id="exampleInputPassword2" name="password2" maxlength="255" required>
                             <button class="btn btn-outline-secondary" type="button" id="togglePassword1">
                                 👁️
                             </button>
@@ -46,7 +46,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                     <div class="mb-3">
                         <label>ФИО
                             <input type="text" class="form-control" name="fio"
-                                   value="<?= htmlspecialchars($_POST['fio'] ?? '') ?>" placeholder="Гвоздков Сергей Алексеевич" required>
+                                   value="<?= htmlspecialchars($_POST['fio'] ?? '') ?>" placeholder="Гвоздков Сергей Алексеевич" maxlength="255" required>
                         </label>
                     </div>
 
@@ -60,7 +60,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                     <div class="mb-3">
                         <label>Адрес
                             <input type="text" class="form-control" name="address"
-                                   value="<?= htmlspecialchars($_POST['address'] ?? '') ?>" placeholder="г. Волгоград, пр-кт Ленина 28" required>
+                                   value="<?= htmlspecialchars($_POST['address'] ?? '') ?>" placeholder="г. Волгоград, пр-кт Ленина 28" maxlength="255" required>
                         </label>
                     </div>
 
@@ -84,13 +84,13 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 
                     <div class="mb-3">
                         <label>Интересы
-                            <textarea class="form-control" name="interests" placeholder="Пить пиво" required><?= htmlspecialchars($_POST['interests'] ?? '') ?></textarea>
+                            <textarea class="form-control" name="interests" placeholder="Пить пиво" maxlength="255" required><?= htmlspecialchars($_POST['interests'] ?? '') ?></textarea>
                         </label>
                     </div>
 
                     <div class="mb-3">
                         <label>Профиль ВК
-                            <input type="url" class="form-control" name="vk_profile" value="<?= htmlspecialchars($_POST['vk_profile'] ?? '') ?>" placeholder="https://vk.com/s.gvozdkov" required>
+                            <input type="url" class="form-control" name="vk_profile" value="<?= htmlspecialchars($_POST['vk_profile'] ?? '') ?>" placeholder="https://vk.com/s.gvozdkov" maxlength="255" required>
                         </label>
                     </div>
 
