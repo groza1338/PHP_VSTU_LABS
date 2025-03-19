@@ -28,7 +28,7 @@ class UsersLogic
         $password = password_hash($password, PASSWORD_DEFAULT);
 
         try {
-            if (!empty(UsersTable::get_by_email($email))) {
+            if (!empty(UsersTable::getByEmail($email))) {
                 return ['Такой email уже используется'];
             }
             UsersTable::create($email, $password, $fio, $birthday, $address, $gender, $interests, $vk_profile, $blood_type, $Rh_factor);
@@ -46,7 +46,7 @@ class UsersLogic
             return "Вы уже авторизированны";
         }
 
-        $user = UsersTable::get_by_email($email);
+        $user = UsersTable::getByEmail($email);
 
         if (!$user) {
             return "Пользователь с таким email не найден";
@@ -77,6 +77,6 @@ class UsersLogic
             return [];
         }
 
-        return UsersTable::get_by_id($_SESSION['user_id']);
+        return UsersTable::getById($_SESSION['user_id']);
     }
 }

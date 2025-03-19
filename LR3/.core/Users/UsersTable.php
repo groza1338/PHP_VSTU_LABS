@@ -24,7 +24,7 @@ class UsersTable
         }
     }
 
-    public static function get_by_email(string $email) : array
+    public static function getByEmail(string $email) : array
     {
         $query = Database::prepare('SELECT * FROM `users` WHERE `email` = :email LIMIT 1');
         $query->bindValue(':email', $email);
@@ -38,7 +38,7 @@ class UsersTable
         return $users[0];
     }
 
-    public static function get_by_id(string $user_id)
+    public static function getById(string $user_id)
     {
         $query = Database::prepare('SELECT * FROM `users` WHERE `id` = :user_id LIMIT 1');
         $query->bindValue(':user_id', $user_id);
