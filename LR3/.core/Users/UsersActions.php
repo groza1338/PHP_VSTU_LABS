@@ -45,7 +45,7 @@ class UsersActions
         return $errors;
     }
 
-    public static function SignOut(): void
+    public static function signOut(): void
     {
         if ('POST' !== $_SERVER['REQUEST_METHOD']) {
             return;
