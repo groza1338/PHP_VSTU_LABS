@@ -109,14 +109,6 @@ class Validator
             self::$errors[] = "Вы ввели неверную ссылку";
         }
 
-        // Получаем HTML контент страницы через file_get_contents
-        $html = @file_get_contents($vkProfile);
-
-        // Проверяем, если страница не найдена (например, ошибка 404)
-        if ($html === false) {
-            self::$errors[] = "Страница не найдена.";
-        }
-
         if (strlen($vkProfile) > 255) {
             self::$errors[] = "В ссылке на профиль ВК не должно быть больше 255 символов";
         }
