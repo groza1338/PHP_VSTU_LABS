@@ -123,8 +123,15 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                     </div>
 
 
-                    <button type="submit" name="action" value="signUp" class="btn btn-primary">Зарегистрироваться</button>
-                    <button id="loginBtn" class="btn btn-secondary">Авторизация</button>
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" name="action" value="signUp" class="btn btn-primary">Зарегистрироваться
+                        </button>
+                        <div class="d-flex align-items-center">
+                            <label class="me-2">Уже зарегистрированы?</label>
+                            <a id="loginBtn" href="#"
+                               class="link-dark link-underline-opacity-75-hover link-opacity-75-hover">Войти</a>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>

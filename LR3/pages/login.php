@@ -31,8 +31,15 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                         </button>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary" name="action" value="signIn">Войти</button>
-                <button id="registerBtn" class="btn btn-secondary">Регистрация</button>
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary" name="action" value="signIn">Войти</button>
+                    <div class="d-flex align-items-center">
+                        <label class="me-2">Нет аккаунта?</label>
+                        <a id="registerBtn" href="#" class="link-dark link-opacity-75-hover link-underline-opacity-75-hover">
+                            Зарегистрируйтесь
+                        </a>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
