@@ -105,8 +105,8 @@ class Validator
 
     public static function validateVkProfile(string $vkProfile) : void
     {
-        if (!filter_var($vkProfile, FILTER_VALIDATE_URL)) {
-            self::$errors[] = "Вы ввели неверную ссылку";
+        if (!filter_var($vkProfile, FILTER_VALIDATE_URL) || !preg_match("/vk.com/", $vkProfile)) {
+            self::$errors[] = "Вы ввели неверную ссылку на профиль ВК";
         }
 
         if (strlen($vkProfile) > 255) {
