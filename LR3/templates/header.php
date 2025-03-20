@@ -37,7 +37,7 @@ $currentUser = UsersLogic::currentUser();
                 <?php if (!empty($currentUser)): ?>
                     <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://picsum.photos/32/32" alt="profile_img" width="32" height="32"
+                        <img src="https://picsum.photos/32" alt="profile_img" width="32" height="32"
                              class="rounded-circle">
                     </a>
                     <ul class="dropdown-menu text-small" style="">
