@@ -57,4 +57,11 @@ class UsersActions
 
         UsersLogic::signOut();
     }
+
+    public static function requireAuth() : void
+    {
+        if (!UsersLogic::isAuthorized()) {
+            header("Location: ../pages/login.php");
+        }
+    }
 }
