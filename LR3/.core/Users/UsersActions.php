@@ -58,10 +58,10 @@ class UsersActions
         UsersLogic::signOut();
     }
 
-    public static function requireAuth() : void
+    public static function requireAuth(string $from) : void
     {
         if (!UsersLogic::isAuthorized()) {
-            header("Location: ../pages/login.php");
+            header("Location: ../pages/login.php" . "?from=$from");
         }
     }
 }
