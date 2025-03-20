@@ -63,7 +63,8 @@ class UsersLogic
 
     public static function signOut(): void
     {
-        unset($_SESSION['user_id']);
+        session_unset();
+        session_destroy();
     }
 
     public static function isAuthorized() : bool
