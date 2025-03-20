@@ -56,6 +56,8 @@ class UsersActions
         }
 
         UsersLogic::signOut();
+
+        header("Location: " . $_SERVER['REQUEST_URI']);
     }
 
     public static function requireAuth(string $from) : void
