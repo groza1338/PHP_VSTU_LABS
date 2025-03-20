@@ -6,7 +6,7 @@ GroupsActions::getMajorsOptions();
 require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 ?>
     <div class="container-fluid" style="width: 1200px">
-        <form method="get" class="text-center align-items-center justify-content-center mb-3">
+        <form method="get" class="text-center align-items-center justify-content-center mb-3" id="form_groups">
             <label class="fs-5 mb-3">Фильтрация</label>
             <div class="mb-3">
                 <label for="name" class="form-label">по названию:</label>
@@ -47,30 +47,36 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
             </tbody>
         </table>
     </div>
-<!--    <script>-->
-<!--        document.addEventListener("DOMContentLoaded", function () {-->
-<!--            const form = document.querySelector("form");-->
-<!---->
-<!--            form.addEventListener("submit", function (event) {-->
-<!--                event.preventDefault(); // Останавливаем стандартную отправку формы-->
-<!---->
-<!--                const formData = new FormData(form);-->
-<!--                const params = new URLSearchParams();-->
-<!---->
-<!--                formData.forEach((value, key) => {-->
-<!--                    if (value.trim() !== "") { // Добавляем только НЕ пустые параметры-->
-<!--                        params.append(key, value);-->
-<!--                    }-->
-<!--                });-->
-<!---->
-<!--                const queryString = params.toString();-->
-<!--                const actionUrl = form.getAttribute("action");-->
-<!---->
-<!--                // Перенаправляем без пустых параметров-->
-<!--                window.location.href = queryString ? `${actionUrl}?${queryString}` : actionUrl;-->
-<!--            });-->
-<!--        });-->
-<!--    </script>-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("form_groups")
+            console.log("aboba");
+            console.log(form);
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Останавливаем стандартную отправку формы
+
+                const formData = new FormData(form);
+                console.log(formData)
+                const params = new URLSearchParams();
+                console.log(params)
+
+                formData.forEach((value, key) => {
+                    if (value.trim() !== "") { // Добавляем только НЕ пустые параметры
+                        params.append(key, value);
+                    }
+                });
+                console.log(params);
+                const queryString = params.toString();
+                console.log(queryString);
+                const actionUrl = form.action;
+                console.log(actionUrl);
+
+                // Перенаправляем без пустых параметров
+                window.location.href = queryString ? `${actionUrl}?${queryString}` : actionUrl;
+            });
+        });
+    </script>
 
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'].'/LR3/templates/footer.php');
