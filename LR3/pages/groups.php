@@ -48,33 +48,35 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
         </table>
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const form = document.getElementById("form_groups")
-            console.log("aboba");
-            console.log(form);
+        document.getElementById("form_groups").addEventListener("submit", function(event) {
+            let form = event.target;
+            let submitter = event.submitter; // Узнаем, какая кнопка отправила форму
 
-            form.addEventListener("submit", function (event) {
-                event.preventDefault(); // Останавливаем стандартную отправку формы
+            // Если нажата кнопка очистки фильтров — не изменяем параметры
+            if (submitter && submitter.name === "clearFilter") {
+                return;
+            }
 
-                const formData = new FormData(form);
-                console.log(formData)
-                const params = new URLSearchParams();
-                console.log(params)
+            event.preventDefault(); // Останавливаем стандартную отправку формы
 
-                formData.forEach((value, key) => {
-                    if (value.trim() !== "") { // Добавляем только НЕ пустые параметры
-                        params.append(key, value);
-                    }
-                });
-                console.log(params);
-                const queryString = params.toString();
-                console.log(queryString);
-                const actionUrl = form.action;
-                console.log(actionUrl);
+            let formData = new FormData(form);
+            let params = new URLSearchParams();
 
-                // Перенаправляем без пустых параметров
-                window.location.href = queryString ? `${actionUrl}?${queryString}` : actionUrl;
-            });
+            // Убираем пустые поля из запроса
+            for (let [key, value] of formData.entries()) {
+                if (value.trim() !== "") {
+                    params.append(key, value);
+                }
+            }
+
+            // Перенаправляем на тот же URL, но без пустых параметров
+            let actionUrl = form.getAttribute("action") || window.location.pathname;
+            if (params.toString()) {
+                window.location.href = actionUrl + "?" + params.toString();
+            } else {
+                window.location.href = actionUrl
+            }
+
         });
     </script>
 
