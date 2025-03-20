@@ -1,7 +1,7 @@
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'].'/LR3/.core/index.php');
 GroupsActions::clearFilters();
-
+UsersActions::requireAuth();
 GroupsActions::getMajorsOptions();
 require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 ?>
