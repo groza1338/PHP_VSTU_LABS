@@ -16,7 +16,7 @@ class UsersActions
         $errors = UsersLogic::signIn($_POST['email'], $_POST['password']);
 
         if (empty($errors)) {
-            header("Location: " . $_SERVER['PHP_SELF'] . "?success=y");
+            header("Location: " . $_GET['from']);
             die();
         }
 
