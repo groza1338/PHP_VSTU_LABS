@@ -18,7 +18,7 @@ $currentUser = UsersLogic::currentUser();
 <header class="p-3 mb-3 border-bottom">
     <div class="container-fluid">
         <div class="d-flex flex-nowrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none me-auto">
+            <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none me-auto">
                 <img src="/LR3/public/logo.svg" alt="лого" class="img-fluid" style="height: 40px;">
             </a>
 
