@@ -54,7 +54,7 @@ class GroupsLogic
         foreach ($group_items as $group_item) {
             $html .= '<tr>';
             $html .= '<th scope="row">';
-            $html .= '<img src="../group_photos/' . htmlspecialchars($group_item['group_photo']) . '" alt="image" style="max-width: 200px;">';
+            $html .= '<img src="../.core/secure_image.php?file=' . htmlspecialchars($group_item['group_photo']) . '" alt="image" style="max-width: 200px;">';
             $html .= '</th>';
             $html .= '<td>' . $group_item['name'] . '</td>';
             $html .= '<td>' . $group_item['majors_name'] . '</td>';
