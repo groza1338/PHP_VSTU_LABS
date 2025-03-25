@@ -1,6 +1,5 @@
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'].'/LR3/.core/index.php');
-GroupsActions::clearFilters();
 UsersActions::requireAuth($_SERVER['SCRIPT_NAME']);
 GroupsActions::getMajorsOptions();
 require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
@@ -30,7 +29,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                        value="<?php echo isset($_GET['year']) ? htmlspecialchars($_GET['year']) : ''; ?>">
             </div>
             <input type="submit" value="Применить фильтр" class="btn btn-primary me-2">
-            <input type="submit" name="clearFilter" value="Очистить фильтр" class="btn btn-danger">
+            <a class="btn btn-danger" href="groups.php">Очистить фильтр</a>
         </form>
         <table class="table table-bordered">
             <thead>
@@ -47,6 +46,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
             </tbody>
         </table>
     </div>
+
     <script>
         document.getElementById("form_groups").addEventListener("submit", function(event) {
             let form = event.target;

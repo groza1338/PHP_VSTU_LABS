@@ -2,14 +2,6 @@
 
 class GroupsActions
 {
-    public static function clearFilters() : void
-    {
-        if (isset($_GET['clearFilter'])) {
-            header('Location: ' . $_SERVER['PHP_SELF']);
-            die();
-        }
-    }
-
     public static function getGroupsItemsTable() : string
     {
         $groups_items = GroupsLogic::getGroupsWithParams(
