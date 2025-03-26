@@ -43,27 +43,4 @@ class GroupsLogic
         return $html;
     }
 
-    public static function getGroupsItemsTable($group_items) : string
-    {
-        if (empty($group_items)) {
-            return '<tr><td colspan="5">Нет данных</td></tr>';
-        }
-
-        $html = '';
-
-        foreach ($group_items as $group_item) {
-            $html .= '<tr>';
-            $html .= '<th scope="row">';
-            $html .= '<img src="../.core/secure_image.php?file=' . htmlspecialchars($group_item['group_photo']) . '" alt="image" style="max-width: 200px;">';
-            $html .= '</th>';
-            $html .= '<td>' . $group_item['name'] . '</td>';
-            $html .= '<td>' . $group_item['majors_name'] . '</td>';
-            $html .= '<td>' . $group_item['FIO_group'] . '</td>';
-            $html .= '<td>' . $group_item['year_of_entry'] . '</td>';
-            $html .= '</tr>';
-        }
-
-        return $html;
-    }
-
 }
