@@ -29,7 +29,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                        value="<?php echo isset($_GET['year']) ? htmlspecialchars($_GET['year']) : ''; ?>">
             </div>
             <input type="submit" value="Применить фильтр" class="btn btn-primary me-2">
-            <a class="btn btn-danger" href="groups.php">Очистить фильтр</a>
+            <a class="btn btn-danger" href="<?=$_SERVER['PHP_SELF']?>">Очистить фильтр</a>
         </form>
         <table class="table table-bordered">
             <thead>
