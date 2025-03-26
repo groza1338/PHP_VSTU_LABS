@@ -55,6 +55,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
                             <td class="fw-light"><?php echo htmlspecialchars($row['year_of_entry']); ?></td>
                         </tr>
                     <?php endforeach; ?>
+                <?php else: ?>
+                    <tr>
+                        <td colspan="5">Нет данных</td>
+                    </tr>
                 <?php endif; ?>
             </tbody>
         </table>

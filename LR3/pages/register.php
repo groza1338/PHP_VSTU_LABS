@@ -84,7 +84,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 
                     <div class="mb-3">
                         <label>Интересы
-                            <textarea class="form-control" name="interests" placeholder="Пить пиво" maxlength="255" required><?= htmlspecialchars($_POST['interests'] ?? '') ?></textarea>
+                            <textarea class="form-control" name="interests" placeholder="Учиться" maxlength="255" required><?= htmlspecialchars($_POST['interests'] ?? '') ?></textarea>
                         </label>
                     </div>
 

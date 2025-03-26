@@ -53,7 +53,7 @@ $currentUser = UsersLogic::currentUser();
                         </li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Настройки</a></li>
-                        <li><a class="dropdown-item" href="#">Профиль</a></li>
+                        <li><a class="dropdown-item" href="/LR3/pages/groups.php">К формочке</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li>
                             <form method="POST">

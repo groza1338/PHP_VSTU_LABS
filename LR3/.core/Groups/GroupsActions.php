@@ -2,16 +2,14 @@
 
 class GroupsActions
 {
-    public static function getGroupsItemsTable() : string
+    public static function getGroupsItems() : ?array
     {
-        $groups_items = GroupsLogic::getGroupsWithParams(
+        return GroupsLogic::getGroupsWithParams(
             $_GET['name'] ?? null,
             $_GET['fio'] ?? null,
             $_GET['year'] ?? null,
             $_GET['major'] ?? null,
         );
-
-        return GroupsLogic::getGroupsItemsTable($groups_items);
     }
 
     public static function getMajorsOptions() : string
