@@ -2,6 +2,7 @@
 require_once ($_SERVER['DOCUMENT_ROOT'].'/LR3/.core/index.php');
 UsersActions::requireAuth($_SERVER['SCRIPT_NAME']);
 GroupsActions::getMajorsOptions();
+$groupItems = GroupsActions::getGroupsItems();
 require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 ?>
     <div class="container-fluid" style="width: 1200px">
@@ -42,7 +43,19 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
             </tr>
             </thead>
             <tbody>
-                <?=GroupsActions::getGroupsItemsTable() ?>
+                <?php if (!empty($groupItems)): ?>
+                    <?php foreach ($groupItems as $row): ?>
+                        <tr>
+                            <th scope="row">
+                                <img src="/LR3/.core/secure_image.php?file=<?= htmlspecialchars($row['group_photo']) ?>" alt="фото группы" style="max-width: 200px;">
+                            </th>
+                            <td class="fw-light"><?php echo htmlspecialchars($row['name']); ?></td>
+                            <td class="fw-light"><?php echo htmlspecialchars($row['majors_name']); ?></td>
+                            <td class="fw-light"><?php echo htmlspecialchars($row['FIO_group']); ?></td>
+                            <td class="fw-light"><?php echo htmlspecialchars($row['year_of_entry']); ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </tbody>
         </table>
     </div>
