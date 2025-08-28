@@ -9,7 +9,7 @@ class Database
     protected function __construct()
     {
         $this->connection = new PDO(
-            'mysql:host=localhost;dbname=LR3',
+            'mysql:host=127.0.0.1;dbname=LR3',
             'root',
             '',
             [
