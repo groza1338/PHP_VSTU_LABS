@@ -1,6 +1,12 @@
 <?php
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/LR3/.core/index.php');
 $error = UsersActions::signIn();
+
+$currentUser = UsersLogic::currentUser();
+
+if ($currentUser) {
+    header("Location: ./groups.php");
+}
 require_once($_SERVER['DOCUMENT_ROOT'] . "/LR3/templates/header.php");
 ?>
 <main class="container-fluid py-3">
