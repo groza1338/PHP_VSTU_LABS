@@ -21,7 +21,7 @@ class UsersTable
         $query->bindValue(':Rh_factor', $Rh_factor);
 
         if (!$query->execute()) {
-            throw new PDOException('При добавлении пользователя возникла ошибка');
+            throw new \PDOException('При добавлении пользователя возникла ошибка');
         }
     }
 

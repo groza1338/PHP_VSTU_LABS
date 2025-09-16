@@ -15,3 +15,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'] . '/LR4/.core/Groups/GroupsActions.php')
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/LR4/.core/Groups/GroupsLogic.php');
 
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/LR4/.core/Groups/GroupsTable.php');
+
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/LR4/.core/TextWorking/TextWorkingActions.php');
+
+require_once ($_SERVER['DOCUMENT_ROOT'] . '/LR4/.core/TextWorking/TextWorkingLogic.php');

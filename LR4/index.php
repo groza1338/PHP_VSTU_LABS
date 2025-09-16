@@ -1,2 +1,2 @@
 <?php
-header("Location: ./pages/groups.php");
+header("Location: ./pages/text.php");
