@@ -69,7 +69,6 @@ class Database
 
     private function env(string $key, ?string $default = null): ?string
     {
-        // Берём из $_ENV, потом $_SERVER, потом getenv()
         $val = $_ENV[$key] ?? $_SERVER[$key] ?? getenv($key);
         if ($val === false || $val === null || $val === '') {
             return $default;
