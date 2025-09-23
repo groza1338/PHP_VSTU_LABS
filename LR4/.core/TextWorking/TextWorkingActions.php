@@ -13,7 +13,7 @@ class TextWorkingActions
         return $_POST['text'] ?? '';
     }
 
-    public static function getFirstTaskText() : string
+    public static function getTaskText($task) : string
     {
         if ('POST' !== $_SERVER['REQUEST_METHOD']) {
             return '';
@@ -25,7 +25,7 @@ class TextWorkingActions
 
         $text = $_POST['text'] ?? null;
         if ($text) {
-            return TextWorkingLogic::getFirstTaskResult($text);
+            return TextWorkingLogic::getTaskResult($text, $task);
         }
 
         return '';
