@@ -77,7 +77,8 @@ class TextWorkingLogic
 
     private static function getSeventeenthTaskResult($text): string
     {
-        return '4';
+        $text = preg_replace('/(\b\w+)((-\1\b)+)/ui', '$1<span style="background-color: yellow;">$2</span>', $text);
+        return $text;
     }
 
     public static function getTaskResult($text, $task): string
