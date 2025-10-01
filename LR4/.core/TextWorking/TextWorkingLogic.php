@@ -48,7 +48,31 @@ class TextWorkingLogic
 
     private static function getTwelfthTaskResult($text): string
     {
-        return '3';
+        $result = "<div class=\"table-index\">\n<h3>Указатель таблиц</h3>\n<ol>\n";
+
+        $content = preg_replace_callback(
+            '/<table\b[^>]*>.*?<tr\b[^>]*>.*?<(th|td)\b[^>]*>(.*?)<\/\1>.*?<\/table>/uis',
+            function($match) use (&$result) {
+                static $idx = 1;
+                $id = 'table-' . $idx;
+
+                $cellText = is_array($match[2]) ? $match[2][0] : $match[2];
+
+                $result .= sprintf(
+                    '<li><a href="#%s">Таблица %d</a> "%s"</li>'."\n",
+                    $id,
+                    $idx,
+                    strip_tags($cellText)
+                );
+
+                $idx++;
+                return preg_replace('/<table\b/i', '<table id="'.$id.'"', $match[0], 1);
+            },
+            $text
+        );
+
+        $result .= "</ol>\n</div>\n";
+        return $result;
     }
 
     private static function getSeventeenthTaskResult($text): string
