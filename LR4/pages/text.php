@@ -3,9 +3,9 @@ namespace LR4;
 require_once $_SERVER['DOCUMENT_ROOT'] . '/LR4/.core/index.php';
 $text = TextWorkingActions::getTextFromForm();
 $resultFirstTask = TextWorkingActions::getTaskText(1);
-$resultSecondTask = TextWorkingActions::getTaskText(7);
-$resultThirdTask = TextWorkingActions::getTaskText(12);
-$resultFourthTask = TextWorkingActions::getTaskText(17);
+$resultSeventhTask = TextWorkingActions::getTaskText(7);
+$resultTwelfthTask = TextWorkingActions::getTaskText(12);
+$resultSeventeenthTask = TextWorkingActions::getTaskText(17);
 require_once $_SERVER['DOCUMENT_ROOT'] . '/LR4/templates/header.php';
 ?>
 <style>
@@ -53,18 +53,18 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/LR4/templates/header.php';
     <div class="m-5">
         <p>Задание 7</p>
         <p>Удалить повторяющиеся знаки препинания (восклицательные и вопросительные обрезаются до трех, море точек — до многоточия).</p>
-        <?= $resultSecondTask ?>
+        <?= $resultSeventhTask ?>
     </div>
     <div class="m-5">
         <p>Задание 12</p>
         <p>Автоматически сформировать “Указатель таблиц”. Работает как оглавление, но ссылки делаются на таблицы в документе. Текст ссылки такой: </p>
-        <?= $resultThirdTask ?>
+        <?= $resultTwelfthTask ?>
     </div>
     <div class="m-5">
         <p>Задание 17</p>
         <p>Подсветить в тексте технические повторы. Если дважды подряд вставлено одно и то же слово, второе вхождение должно быть подсвечено желтым фоном. Если слово вставлено 3, 4, более раз подряд, все вхождения после первого подсвечиваются.
         </p>
-        <?= $resultFourthTask ?>
+        <?= $resultSeventeenthTask ?>
     </div>
 </main>
 <?php

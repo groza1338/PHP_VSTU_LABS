@@ -35,17 +35,17 @@ class TextWorkingLogic
         return $result;
     }
 
-    private static function getSecondTaskResult($text): string
+    private static function getSeventhTaskResult($text): string
     {
         return '2';
     }
 
-    private static function getThirdTaskResult($text): string
+    private static function getTwelfthTaskResult($text): string
     {
         return '3';
     }
 
-    private static function getFourthTaskResult($text): string
+    private static function getSeventeenthTaskResult($text): string
     {
         return '4';
     }
@@ -56,14 +56,14 @@ class TextWorkingLogic
             case 1:
                 $result = self::getFirstTaskResult($text);
                 break;
-            case 2:
-                $result = self::getSecondTaskResult($text);
+            case 7:
+                $result = self::getSeventhTaskResult($text);
                 break;
-            case 3:
-                $result = self::getThirdTaskResult($text);
+            case 12:
+                $result = self::getTwelfthTaskResult($text);
                 break;
-            case 4:
-                $result = self::getFourthTaskResult($text);
+            case 17:
+                $result = self::getSeventeenthTaskResult($text);
                 break;
             default:
                 return '';
