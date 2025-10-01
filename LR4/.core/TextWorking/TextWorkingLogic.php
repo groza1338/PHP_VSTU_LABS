@@ -6,7 +6,33 @@ class TextWorkingLogic
 {
     private static function getFirstTaskResult($text): string
     {
-        return '1';
+        preg_match_all('/<(h1|h2)[^>]*>(.*?)<\/\1>/uis', $text, $matches, PREG_SET_ORDER);
+
+        $result = "<ol class='hnum'>";
+        $h1Opened = false;
+        foreach ($matches as $match) {
+            $tag = $match[1];
+            $text = strip_tags($match[2]);
+
+            if ($tag == 'h1') {
+                if ($h1Opened) {
+                    $result .= "</ol></li>";
+                }
+
+                $result .= "<li>$text<ol>";
+                $h1Opened = true;
+            }
+            elseif ($tag == 'h2') {
+                $result .= "<li>$text</li>";
+            }
+        }
+
+        if ($h1Opened) {
+            $result .= "</ol></li>";
+        }
+        $result .= "</ol>";
+
+        return $result;
     }
 
     private static function getSecondTaskResult($text): string
