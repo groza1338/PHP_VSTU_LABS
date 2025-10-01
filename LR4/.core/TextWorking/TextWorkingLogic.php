@@ -37,7 +37,13 @@ class TextWorkingLogic
 
     private static function getSeventhTaskResult($text): string
     {
-        return '2';
+        $text = preg_replace('/\.{3,}/u', '…', $text);
+
+        $text = preg_replace('/!{4,}/u', '!!!', $text);
+
+        $text = preg_replace('/\?{4,}/u', '???', $text);
+
+        return $text;
     }
 
     private static function getTwelfthTaskResult($text): string
