@@ -46,27 +46,35 @@ class TextWorkingLogic
         return $text;
     }
 
-    private static function getTwelfthTaskResult($text): string
+    private static function getTwelfthTaskResult(string &$text): string
     {
         $result = "<div class=\"table-index\">\n<h3>Указатель таблиц</h3>\n<ol>\n";
 
-        $content = preg_replace_callback(
-            '/<table\b[^>]*>.*?<tr\b[^>]*>.*?<(th|td)\b[^>]*>(.*?)<\/\1>.*?<\/table>/uis',
-            function($match) use (&$result) {
+        $text = preg_replace_callback(
+            '/(?P<open><table\b[^>]*>)'
+            . '(?:(?:(?!<\/table>).)*?)'
+            . '<tr\b[^>]*>.*?<(th|td)\b[^>]*>'
+            . '(?P<cell>.*?)<\/\2>.*?<\/table>/uis',
+            static function ($m) use (&$result) {
                 static $idx = 1;
-                $id = 'table-' . $idx;
 
-                $cellText = is_array($match[2]) ? $match[2][0] : $match[2];
+                $open = $m['open'];
 
-                $result .= sprintf(
-                    '<li><a href="#%s">Таблица %d</a> "%s"</li>'."\n",
-                    $id,
-                    $idx,
-                    strip_tags($cellText)
-                );
+                if (preg_match('/\bid\s*=\s*([\'"])([^\'"]+)\1/i', $open, $idMatch)) {
+                    $id = $idMatch[2];
+                    $newOpen = $open;
+                } else {
+                    $id = 'table-' . $idx;
+                    $newOpen = preg_replace('/<table\b/i', '<table id="'.$id.'"', $open, 1);
+                }
+
+                $label = trim(preg_replace('/\s+/u', ' ', strip_tags($m['cell'])));
+
+                $result .= sprintf('<li><a href="#%s">Таблица %d “%s”</a></li>'."\n", $id, $idx, $label);
 
                 $idx++;
-                return preg_replace('/<table\b/i', '<table id="'.$id.'"', $match[0], 1);
+
+                return $newOpen . substr($m[0], strlen($open));
             },
             $text
         );
