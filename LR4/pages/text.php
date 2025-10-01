@@ -8,6 +8,18 @@ $resultThirdTask = TextWorkingActions::getTaskText(12);
 $resultFourthTask = TextWorkingActions::getTaskText(17);
 require_once $_SERVER['DOCUMENT_ROOT'] . '/LR4/templates/header.php';
 ?>
+<style>
+    ol.hnum { list-style: none; counter-reset: item; padding-left: 1.5rem; }
+
+    ol.hnum li { display: block; margin: .25rem 0; }
+    ol.hnum li::before {
+        content: counters(item, ".") ". ";
+        counter-increment: item;
+        font-variant-numeric: tabular-nums;
+    }
+
+    ol.hnum ol { counter-reset: item; padding-left: 1.5rem; }
+</style>
 <main class="container">
     <div>
         <div class="btn-group" role="group">
