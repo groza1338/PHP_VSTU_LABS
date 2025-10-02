@@ -3,7 +3,7 @@ require_once "groups_logic.php";
 require_once "header.php";
 ?>
     <div class="container-fluid" style="width: 1200px">
-        <form method="get" action="groups.php" class="text-center align-items-center justify-content-center mb-3">
+        <form class="text-center align-items-center justify-content-center mb-3">
             <label class="fs-5 mb-3">Фильтрация</label>
             <div class="mb-3">
                 <label for="name" class="form-label">по названию:</label>

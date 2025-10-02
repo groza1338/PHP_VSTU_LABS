@@ -1,0 +1,8 @@
+# Запрещаем доступ ко всем файлам напрямую
+Order Deny,Allow
+Deny from all
+
+# Разрешаем доступ только через `secure_image.php`
+<FilesMatch "secure_image.php">
+    Allow from all
+</FilesMatch>
