@@ -6,7 +6,7 @@ class TextWorkingLogic
 {
     private static function getFirstTaskResult($text): string
     {
-        preg_match_all('/<(h1|h2)[^>]*>(.*?)<\/\1>/uis', $text, $matches, PREG_SET_ORDER);
+        preg_match_all('/<(h1|h2)[^>]*>(.*?)<\/\1>/is', $text, $matches, PREG_SET_ORDER);
 
         $result = "<ol class='hnum'>";
         $h1Opened = false;

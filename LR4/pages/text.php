@@ -21,7 +21,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/LR4/templates/header.php';
     ol.hnum ol { counter-reset: item; padding-left: 1.5rem; }
 </style>
 <main class="container">
-    <div>
+    <div class="m-5">
         <div class="btn-group" role="group">
             <a class="btn btn-primary" href="text.php?preset=1">
                 Пресет 1
@@ -31,6 +31,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/LR4/templates/header.php';
             </a>
             <a class="btn btn-primary" href="text.php?preset=3">
                 Пресет 3
+            </a>
+            <a class="btn btn-outline" href="text.php">
+                Сбросить все
             </a>
         </div>
         <div class="btn-group" role="group">
@@ -42,9 +45,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/LR4/templates/header.php';
         <textarea id="text" class="form-control" name="text"><?= $text ?></textarea>
         <button type="submit" class="btn btn-primary mt-2" name="action" value="submit">Отправить</button>
     </form>
-    <p>
-        Результаты обработки:
-    </p>
+    <h2 class="m-5">
+        Результат выполнения
+    </h2>
     <div class="m-5">
         <p>Задание 1</p>
         <p>Найти заголовки 1-2 уровня в тексте вывести их в виде многоуровневого списка</p>
