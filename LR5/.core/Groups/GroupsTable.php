@@ -46,4 +46,14 @@ class GroupsTable
 
         return $groups;
     }
+
+    public static function getAllRaw() : array
+    {
+        $q = Database::prepare(
+            'SELECT id, group_photo, name, FIO_group, major_id, year_of_entry
+             FROM `groups`'
+        );
+        $q->execute();
+        return $q->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
