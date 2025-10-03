@@ -10,7 +10,7 @@ class FileActions
             return null;
         }
 
-        return FileLogic::import($_POST['url_to_file'] ?? null);
+        return FileLogic::import();
     }
 
     public static function export() : ?array
@@ -19,6 +19,6 @@ class FileActions
             return null;
         }
 
-        return FileLogic::export($_POST['path_to_save'] ?? null);
+        return FileLogic::export();
     }
 }
