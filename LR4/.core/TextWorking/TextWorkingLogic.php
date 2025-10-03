@@ -21,8 +21,7 @@ class TextWorkingLogic
 
                 $result .= "<li>$text<ol>";
                 $h1Opened = true;
-            }
-            elseif ($tag == 'h2') {
+            } elseif ($tag == 'h2') {
                 $result .= "<li>$text</li>";
             }
         }
@@ -48,29 +47,37 @@ class TextWorkingLogic
 
     private static function getTwelfthTaskResult(string &$text): string
     {
+        $re = '~(?P<open><table\b[^>]*>)\s*'
+            . '.*?<tr\b[^>]*>\s*'
+            . '.*?<(?P<celltag>th|td)\b[^>]*>(?P<cell>.*?)</(?P=celltag)>'
+            . '.*?</table>~uis';
+
         $result = "<div class=\"table-index\">\n<h3>Указатель таблиц</h3>\n<ol>\n";
 
         $text = preg_replace_callback(
-            '/(?P<open><table\b[^>]*>)'
-            . '(?:(?:(?!<\/table>).)*?)'
-            . '<tr\b[^>]*>.*?<(th|td)\b[^>]*>'
-            . '(?P<cell>.*?)<\/\2>.*?<\/table>/uis',
-            static function ($m) use (&$result) {
+            $re,
+            static function (array $m) use (&$result) {
                 static $idx = 1;
 
                 $open = $m['open'];
 
-                if (preg_match('/\bid\s*=\s*([\'"])([^\'"]+)\1/i', $open, $idMatch)) {
+                if (preg_match('~\bid\s*=\s*([\'"])([^\'"]+)\1~i', $open, $idMatch)) {
                     $id = $idMatch[2];
                     $newOpen = $open;
                 } else {
                     $id = 'table-' . $idx;
-                    $newOpen = preg_replace('/<table\b/i', '<table id="'.$id.'"', $open, 1);
+                    $newOpen = preg_replace('~<table\b~i', '<table id="' . $id . '"', $open, 1);
                 }
 
                 $label = trim(preg_replace('/\s+/u', ' ', strip_tags($m['cell'])));
+                $label = htmlspecialchars($label, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 
-                $result .= sprintf('<li><a href="#%s">Таблица %d “%s”</a></li>'."\n", $id, $idx, $label);
+                $result .= sprintf(
+                    "<li><a href=\"#%s\">Таблица %d “%s”</a></li>\n",
+                    $id,
+                    $idx,
+                    $label
+                );
 
                 $idx++;
 
